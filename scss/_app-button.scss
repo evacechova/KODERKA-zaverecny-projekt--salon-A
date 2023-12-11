@@ -1,0 +1,28 @@
+@use 'colors';
+
+.app-button {
+    padding: 0.5em 1.2em;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    display: block;
+    margin: 40px auto;
+    color: colors.$background;
+    background-color: colors.$accent-dark;
+    border: none;
+
+    
+    &:is(:hover,
+    :focus, :active) {
+        font-weight: 400;
+        box-shadow: 4px 4px 8px colors.$font;
+    }
+
+    @media screen and (min-width: 480px) {
+        
+         
+    }
+}
+

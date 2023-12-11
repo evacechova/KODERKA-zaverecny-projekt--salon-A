@@ -1,12 +1,118 @@
-.IG-glyph {
+.header {
+  margin-top: 10px;
+}
+
+.header__link {
+  text-decoration: none;
+  font-size: 40px;
+  padding: 0 0 0 20px;
+}
+.header__link-a {
+  font-family: "Luxurious Script", cursive;
+  font-size: 54px;
+}
+
+.header__photo {
+  height: auto;
+  width: 100%;
+  border: 1px solid #CAC1B0;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 480px) {
+  .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+.menu__item {
+  text-decoration: none;
+  text-transform: lowercase;
+}
+.menu__item:is(:hover,
+:focus, :active) {
+  font-weight: 700;
+}
+.menu__glyph {
   max-width: 29px;
 }
 
-.header-container {
-  width: auto;
-  height: 500px;
+.footer {
+  width: 100%;
+  margin: 0;
+  padding: 1em 1em;
+  font-size: 0.7em;
+  text-align: center;
+  background-color: #CAC1B0;
+  border: 1px solid #CAC1B0;
+}
+.footer__text {
+  margin: 0;
 }
 
-.header-photo {
-  width: 100%;
+.app-button {
+  padding: 0.5em 1.2em;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  display: block;
+  margin: 40px auto;
+  color: #FCFCFB;
+  background-color: #8D857C;
+  border: none;
+}
+.app-button:is(:hover,
+:focus, :active) {
+  font-weight: 400;
+  box-shadow: 4px 4px 8px #2E292B;
+}
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+body {
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  min-height: 100lvh;
+  margin: 0px auto;
+  background-color: #FCFCFB;
+}
+
+.main {
+  min-height: 100lvh;
+}
+
+h1, h2, h3, p, a {
+  font-family: "Noto Sans", sans-serif;
+  color: #2E292B;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+.plain-text {
+  margin: 0;
+  padding: 1em 25%;
+  text-align: center;
+}
+.plain-text:last-child {
+  padding-bottom: 2em;
+}
+
+.profile-card {
+  margin: 2em;
+}
+.profile-card-left {
+  float: left;
 }/*# sourceMappingURL=style.css.map */

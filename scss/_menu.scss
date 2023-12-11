@@ -1,0 +1,27 @@
+@use 'colors';
+
+.menu {
+    list-style-type: none;
+    margin: 0;
+    font-size: 1.2em;    
+    
+    @media screen and (min-width: 480px) {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__item {
+        text-decoration: none;
+        text-transform: lowercase;
+    }
+
+    &__item:is(:hover,
+    :focus, :active) {
+        font-weight: 700;
+    }
+
+    &__glyph {
+        max-width: 29px;
+    }
+}
+

@@ -1,0 +1,16 @@
+@use 'colors';
+
+.footer {
+    width: 100%;
+    margin: 0;
+    padding: 1em 1em;
+    font-size: 0.7em;
+    text-align: center;
+    background-color: colors.$accent-light;
+    border: 1px solid colors.$accent-light;
+    
+
+    &__text {
+        margin: 0;
+    }
+}

@@ -1,13 +1,48 @@
-.IG-glyph {
-    max-width: 29px;
+@use 'colors';
+@use 'header';
+@use 'menu';
+@use 'footer';
+@use 'app-button';
+
+html { box-sizing: border-box; }
+*, ::after, ::before { box-sizing: inherit; }
+
+body {
+    max-width: fit-content;
+    min-height: 100lvh;
+    margin: 0px auto;
+    background-color: colors.$background;
 }
 
-.header-container { //???//
-    width: auto;
-    height: 500px;
+.main {
+    min-height: 100lvh;
 }
 
-.header-photo {
-    width: 100%;
-    //max-height: 360px;//
+h1, h2, h3, p, a {
+    font-family: 'Noto Sans', sans-serif;
+    color: colors.$font;
 }
+
+h1 {
+    text-transform: uppercase;
+}
+
+.plain-text {
+    margin: 0;
+    padding: 1em 25%;
+    text-align: center;
+
+    &:last-child {
+        padding-bottom: 2em;
+    }
+}
+
+.profile-card {
+    margin: 2em;
+
+    &-left {
+        float: left;
+    }
+}
+
+
