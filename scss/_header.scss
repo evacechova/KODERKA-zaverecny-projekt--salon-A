@@ -1,22 +1,24 @@
 @use 'colors';
+@use 'dimensions';
 
 .header {
     margin-top: 10px;
-}
 
-.header__link {
-    text-decoration: none;
-    font-size: 40px;
-    padding: 0 0 0 20px;
-
-    &-a {
-        font-family: 'Luxurious Script', cursive;
-        font-size: 54px;
+    &__link {
+        text-decoration: none;
+        font-size: 40px;
+        padding: 0 0 0 20px;
+    
+        &-a {
+            font-family: 'Luxurious Script', cursive;
+            font-size: 54px;
+        }
+    }
+    
+    &__photo {
+        height: auto;
+        width: 100%;
+        border: 1px solid colors.$accent-light;
     }
 }
 
-.header__photo {
-    height: auto;
-    width: 100%;
-    border: 1px solid colors.$accent-light;
-}

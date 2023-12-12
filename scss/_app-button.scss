@@ -1,4 +1,5 @@
 @use 'colors';
+@use 'dimensions';
 
 .app-button {
     padding: 0.5em 1.2em;
@@ -20,7 +21,7 @@
         box-shadow: 4px 4px 8px colors.$font;
     }
 
-    @media screen and (min-width: 480px) {
+    @media screen and (min-width: dimensions.$desktop) {
         
          
     }
