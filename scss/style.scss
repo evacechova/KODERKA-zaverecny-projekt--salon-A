@@ -6,16 +6,20 @@
 @use 'app-button';
 @use 'nas-tym';
 
-html { box-sizing: border-box; }
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
 *, ::after, ::before { box-sizing: inherit; }
 
 body {
     background-color: colors.$background;
     margin: 0;
+    height: 100%;
 }
 
 .main {
-    min-height: 100lvh;
+    min-height: 100%;
 
     @media screen and (min-width: dimensions.$desktop) {
         max-width: 1240px;

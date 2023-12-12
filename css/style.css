@@ -48,7 +48,6 @@
 
 .footer {
   width: 100%;
-  margin: 0;
   padding: 1em 1em;
   font-size: 0.7em;
   text-align: center;
@@ -125,6 +124,7 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *, ::after, ::before {
@@ -134,10 +134,11 @@ html {
 body {
   background-color: #FCFCFB;
   margin: 0;
+  height: 100%;
 }
 
 .main {
-  min-height: 100lvh;
+  min-height: 100%;
 }
 @media screen and (min-width: 1024px) {
   .main {
