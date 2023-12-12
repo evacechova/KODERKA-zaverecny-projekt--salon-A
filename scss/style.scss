@@ -1,8 +1,10 @@
 @use 'colors';
+@use 'dimensions';
 @use 'header';
 @use 'menu';
 @use 'footer';
 @use 'app-button';
+@use 'nas-tym';
 
 html { box-sizing: border-box; }
 *, ::after, ::before { box-sizing: inherit; }
@@ -16,6 +18,10 @@ body {
 
 .main {
     min-height: 100lvh;
+    margin: 0 auto;
+    @media screen and (min-width: dimensions.$phone) {
+        max-width: calc(100vw*0.5);
+    }
 }
 
 h1, h2, h3, p, a {
@@ -25,6 +31,8 @@ h1, h2, h3, p, a {
 
 h1 {
     text-transform: uppercase;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 .plain-text {
@@ -37,12 +45,5 @@ h1 {
     }
 }
 
-.profile-card {
-    margin: 2em;
-
-    &-left {
-        float: left;
-    }
-}
 
 
