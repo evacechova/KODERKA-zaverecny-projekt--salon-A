@@ -30,7 +30,7 @@
 }
 .menu__item {
   margin: 0 2em;
-  display: flex;
+  position: relative;
 }
 .menu__link {
   text-decoration: none;
@@ -42,6 +42,8 @@
 }
 .menu__glyph {
   max-width: 29px;
+  position: absolute;
+  right: 7em;
 }
 
 .footer {
@@ -140,7 +142,7 @@ body {
 @media screen and (min-width: 1024px) {
   .main {
     max-width: 1240px;
-    margin: 4em auto 8em auto;
+    margin: auto;
   }
 }
 
