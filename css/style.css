@@ -19,20 +19,24 @@
 
 .menu {
   list-style-type: none;
+  width: -moz-fit-content;
+  width: fit-content;
   margin: 0;
   font-size: 1.2em;
-}
-@media screen and (min-width: 480px) {
-  .menu {
-    display: flex;
-    justify-content: space-around;
-  }
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .menu__item {
+  margin: 0 2em;
+  display: flex;
+}
+.menu__link {
   text-decoration: none;
   text-transform: lowercase;
 }
-.menu__item:is(:hover,
+.menu__link:is(:hover,
 :focus, :active) {
   font-weight: 700;
 }
@@ -149,13 +153,4 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 0;
   margin-top: 0;
-}
-
-.plain-text {
-  margin: 0;
-  padding: 1em 25%;
-  text-align: center;
-}
-.plain-text:last-child {
-  padding-bottom: 2em;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,12 @@
+@use 'colors';
+@use 'dimensions';
+
+.plain-text {
+    margin: 0;
+    padding: 1em 25%;
+    text-align: center;
+
+    &:last-child {
+        padding-bottom: 2em;
+    }
+}

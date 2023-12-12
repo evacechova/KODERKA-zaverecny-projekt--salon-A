@@ -3,20 +3,30 @@
 
 .menu {
     list-style-type: none;
+    width: fit-content;
     margin: 0;
-    font-size: 1.2em;    
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     
     @media screen and (min-width: 480px) {
-        display: flex;
-        justify-content: space-around;
+        
     }
 
     &__item {
+        margin: 0 2em;
+        display: flex;
+        //align-items: center;//
+    }
+
+    &__link {
         text-decoration: none;
         text-transform: lowercase;
     }
 
-    &__item:is(:hover,
+    &__link:is(:hover,
     :focus, :active) {
         font-weight: 700;
     }
