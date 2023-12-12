@@ -8,6 +8,8 @@
     text-align: center;
     background-color: colors.$accent-light;
     border: 1px solid colors.$accent-light;
+    position: absolute;
+    bottom: 0;
     
 
     &__text {

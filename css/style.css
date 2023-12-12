@@ -53,6 +53,8 @@
   text-align: center;
   background-color: #CAC1B0;
   border: 1px solid #CAC1B0;
+  position: absolute;
+  bottom: 0;
 }
 .footer__text {
   margin: 0;
@@ -122,9 +124,13 @@
   }
 }
 
+.body-wrapping-div {
+  position: relative;
+  min-height: 100lvh;
+}
+
 html {
   box-sizing: border-box;
-  height: 100%;
 }
 
 *, ::after, ::before {
@@ -134,16 +140,16 @@ html {
 body {
   background-color: #FCFCFB;
   margin: 0;
-  height: 100%;
 }
 
 .main {
-  min-height: 100%;
+  margin: 2em auto auto auto;
+  padding-bottom: 4em;
 }
 @media screen and (min-width: 1024px) {
   .main {
     max-width: 1240px;
-    margin: auto;
+    margin: 4em auto auto auto;
   }
 }
 
