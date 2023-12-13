@@ -1,7 +1,7 @@
 @use 'colors';
 @use 'dimensions';
 
-.app-button {
+.button--main {
     padding: 0.5em 1.2em;
     text-transform: uppercase;
     font-family: 'Noto Sans', sans-serif;
@@ -24,6 +24,11 @@
     @media screen and (min-width: dimensions.$desktop) {
         
          
-    }
+    }//////!!!!!!
+}
+
+.button--small {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
 }
 

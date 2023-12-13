@@ -33,7 +33,6 @@
   position: relative;
 }
 .menu__link {
-  text-decoration: none;
   text-transform: lowercase;
 }
 .menu__link:is(:hover,
@@ -55,12 +54,13 @@
   border: 1px solid #CAC1B0;
   position: absolute;
   bottom: 0;
+  margin-top: 5%;
 }
 .footer__text {
   margin: 0;
 }
 
-.app-button {
+.button--main {
   padding: 0.5em 1.2em;
   text-transform: uppercase;
   font-family: "Noto Sans", sans-serif;
@@ -73,17 +73,38 @@
   background-color: #8D857C;
   border: none;
 }
-.app-button:is(:hover,
+.button--main:is(:hover,
 :focus, :active) {
   font-weight: 400;
   box-shadow: 4px 4px 8px #2E292B;
 }
+.button--small {
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+}
+
+.plain-text {
+  margin: 0;
+  padding: 1em 25%;
+  text-align: center;
+}
+.plain-text:last-child {
+  padding-bottom: 2em;
+}
+
 .profile-card {
   margin-top: 1em;
   padding: 1em;
   display: grid;
-  grid-template-columns: 1fr 0.5fr 1fr;
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+@media screen and (min-width: 1024px) {
+  .profile-card {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 0.5fr) 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
 }
 .profile-card__text {
   padding: 1em;
@@ -108,13 +129,14 @@
   max-width: 75vw;
   border: 1px solid #CAC1B0;
   grid-column: 1/-1;
-  grid-row: 2/-1;
+  grid-row: 2/3;
   justify-self: center;
 }
 @media screen and (min-width: 1024px) {
   .profile-card__photo {
     grid-column: 2/-1;
     grid-row: 1/-1;
+    max-width: 100%;
     justify-self: end;
   }
   .profile-card__photo[alt*=Míša] {
@@ -122,6 +144,38 @@
     grid-row: 1/-1;
     justify-self: start;
   }
+}
+
+.contact-info-box {
+  margin: 1em 5%;
+  padding: 2em 5%;
+}
+@media screen and (min-width: 1024px) {
+  .contact-info-box {
+    border: 2px solid #2E292B;
+  }
+}
+.contact-info-box h1, .contact-info-box h2 {
+  display: flex;
+  justify-content: center;
+}
+.contact-info-box a:is(:hover,
+:focus, :active) {
+  color: #8D857C;
+}
+
+.contact-info-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-info-text h3 {
+  margin-bottom: 0.5em;
+}
+
+.address {
+  margin-top: 0;
+  text-align: center;
 }
 
 .body-wrapping-div {
@@ -144,18 +198,23 @@ body {
 
 .main {
   margin: 2em auto auto auto;
-  padding-bottom: 4em;
+  padding-bottom: 5%;
 }
 @media screen and (min-width: 1024px) {
   .main {
     max-width: 1240px;
     margin: 4em auto auto auto;
+    padding-bottom: 10%;
   }
 }
 
-h1, h2, h3, p, a {
+h1, h2, h3, p, a, td {
   font-family: "Noto Sans", sans-serif;
   color: #2E292B;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1 {

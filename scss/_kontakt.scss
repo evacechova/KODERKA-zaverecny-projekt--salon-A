@@ -1,0 +1,36 @@
+@use 'colors';
+@use 'dimensions';
+
+.contact-info-box {
+    margin: 1em 5%;
+    padding: 2em 5%;
+
+    @media screen and (min-width: dimensions.$desktop) {
+        border: 2px solid colors.$font;        
+    }
+
+    & h1, h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    & a:is(:hover,
+    :focus, :active) {
+        color: colors.$accent-dark; /////!!!!
+    }
+}
+
+.contact-info-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & h3 {
+        margin-bottom: 0.5em;
+    }
+}
+
+.address {
+    margin-top: 0;
+    text-align: center;
+}

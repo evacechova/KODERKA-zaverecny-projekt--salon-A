@@ -3,8 +3,11 @@
 @use 'header';
 @use 'menu';
 @use 'footer';
-@use 'app-button';
+@use 'buttons';
+@use 'index';
 @use 'nas-tym';
+@use 'kontakt';
+
 
 .body-wrapping-div {
     position: relative;
@@ -24,17 +27,22 @@ body {
 
 .main {
     margin: 2em auto auto auto;
-    padding-bottom: 4em;
+    padding-bottom: 5%;
 
     @media screen and (min-width: dimensions.$desktop) {
         max-width: 1240px;
         margin: 4em auto auto auto;
+        padding-bottom: 10%;
     }
 }
 
-h1, h2, h3, p, a {
+h1, h2, h3, p, a, td {
     font-family: 'Noto Sans', sans-serif;
     color: colors.$font;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
