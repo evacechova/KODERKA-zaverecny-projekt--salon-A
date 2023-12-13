@@ -92,8 +92,11 @@
   padding-bottom: 2em;
 }
 
+.nas-tym {
+  margin: 1em auto 15% auto;
+}
+
 .profile-card {
-  margin-top: 1em;
   padding: 1em;
   display: grid;
   grid-template-columns: 1fr;
