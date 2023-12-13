@@ -146,35 +146,75 @@
   }
 }
 
-.contact-info-box {
+.contact-box {
   margin: 1em 5%;
-  padding: 2em 5%;
+  padding: 5% 5%;
 }
 @media screen and (min-width: 1024px) {
-  .contact-info-box {
+  .contact-box {
     border: 2px solid #2E292B;
+    margin: auto;
+    max-width: 70%;
   }
 }
-.contact-info-box h1, .contact-info-box h2 {
+.contact-box h1, .contact-box h2 {
   display: flex;
   justify-content: center;
 }
-.contact-info-box a:is(:hover,
+.contact-box a:is(:hover,
 :focus, :active) {
   color: #8D857C;
 }
 
-.contact-info-text {
+.contact-box__text {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+@media screen and (min-width: 1024px) {
+  .contact-box__text {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 1fr;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+.contact-box__text .opening-hours {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+}
+@media screen and (min-width: 1024px) {
+  .contact-box__text .opening-hours {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+}
+.contact-box__text .opening-hours table {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
-.contact-info-text h3 {
+.contact-box__text .address {
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  margin-bottom: 15%;
+}
+@media screen and (min-width: 1024px) {
+  .contact-box__text .address {
+    grid-column: 2/-1;
+    grid-row: 1/-1;
+    margin-bottom: 0;
+  }
+}
+.contact-box__text h3 {
   margin-bottom: 0.5em;
+  text-align: center;
+  text-transform: lowercase;
 }
-
-.address {
-  margin-top: 0;
+.contact-box__text td:nth-child(2) {
+  padding-left: 2em;
+}
+.contact-box__text p {
+  margin: 0;
   text-align: center;
 }
 

@@ -5,7 +5,7 @@ headerPhoto: kontakt810.webp
 headerAlt: Fotografie recepce salonu
 ---
 
-<div class="contact-info-box">
+<div class="contact-box">
     <h1>Praha – Dejvice</h1>
     
     <h2><a href="tel:+420777666555">+420 777 666555</a></h2>
@@ -13,26 +13,30 @@ headerAlt: Fotografie recepce salonu
     <!-- objednací talčítko -->
     {% include 'partials/button.njk' %}
 
-    <div class="contact-info-text">
-        <h3>Otevírací doba:</h3>
-        <table>
-            <tr>
-                <td>po–so</td>
-                <td>8–20</td>
-            </tr>
-            <tr>
-                <td>ne</td>
-                <td>8–18</td>
-            </tr>
-        </table>
+    <div class="contact-box__text">
+        <div class="opening-hours">
+            <h3>Otevírací doba:</h3>
+            <table>
+                <tr>
+                    <td>po–so</td>
+                    <td>8–20</td>
+                </tr>
+                <tr>
+                    <td>ne</td>
+                    <td>8–18</td>
+                </tr>
+            </table>
+        </div>
 
-        <h3>Těšíme se na vás na adrese:</h3>
-        <p class="address">
-            pachmačské nám. 6<br>
-            160 00<br>
-            praha 6<br>
-            dejvice<br>
-        </p>
+        <div class="address">
+            <h3>Těšíme se na vás na adrese:</h3>
+            <p>
+                pachmačské nám. 6<br>
+                160 00<br>
+                praha 6<br>
+                dejvice<br>
+            </p>
+        </div>
     </div>
 
 </div>
