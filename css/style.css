@@ -1,11 +1,14 @@
 @charset "UTF-8";
 .header {
-  margin-top: 10px;
+  margin-top: 1em;
+  /*position: relative;*/
 }
 .header__link {
   text-decoration: none;
   font-size: 40px;
-  padding: 0 0 0 20px;
+  padding: 0 0 0 0.5em;
+  /*position: absolute;
+  z-index: 1;*/
 }
 .header__link-a {
   font-family: "Luxurious Script", cursive;
@@ -15,6 +18,9 @@
   height: auto;
   width: 100%;
   border: 1px solid #CAC1B0;
+  /*position: absolute;
+  z-index: 0;
+  top: 46px;*/
 }
 
 .menu {
@@ -23,10 +29,19 @@
   width: fit-content;
   margin: 0;
   font-size: 1.2em;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    top: 25px;
+    right: 0;
+  }
 }
 .menu__item {
   margin: 0 2em;
@@ -34,10 +49,11 @@
 }
 .menu__link {
   text-transform: lowercase;
+  text-wrap: nowrap;
 }
 .menu__link:is(:hover,
 :focus, :active) {
-  font-weight: 700;
+  color: #8D857C;
 }
 .menu__glyph {
   max-width: 29px;
@@ -329,6 +345,10 @@
   .price-disclaimer {
     width: 70%;
   }
+}
+
+.top-panel {
+  position: relative;
 }
 
 .body-wrapping-div {

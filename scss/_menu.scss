@@ -6,14 +6,18 @@
     width: fit-content;
     margin: 0;
     font-size: 1.2em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
-    @media screen and (min-width: 480px) {
-        
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    @media screen and (min-width: dimensions.$desktop) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        position: absolute;
+        top: 25px;
+        right: 0;
+    }   
 
     &__item {
         margin: 0 2em;
@@ -22,11 +26,12 @@
 
     &__link {
         text-transform: lowercase;
+        text-wrap: nowrap;
     }
 
     &__link:is(:hover,
     :focus, :active) {
-        font-weight: 700;
+        color: colors.$accent-dark;
     }
 
     &__glyph {

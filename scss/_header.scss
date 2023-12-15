@@ -2,12 +2,15 @@
 @use 'dimensions';
 
 .header {
-    margin-top: 10px;
+    margin-top: 1em;
+    /*position: relative;*/
 
     &__link {
         text-decoration: none;
         font-size: 40px;
-        padding: 0 0 0 20px;
+        padding: 0 0 0 0.5em;
+        /*position: absolute;
+        z-index: 1;*/
     
         &-a {
             font-family: 'Luxurious Script', cursive;
@@ -19,6 +22,9 @@
         height: auto;
         width: 100%;
         border: 1px solid colors.$accent-light;
+        /*position: absolute;
+        z-index: 0;
+        top: 46px;*/
     }
 }
 
