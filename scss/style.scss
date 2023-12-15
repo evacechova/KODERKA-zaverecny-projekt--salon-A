@@ -7,6 +7,7 @@
 @use 'index';
 @use 'nas-tym';
 @use 'kontakt';
+@use 'cenik';
 
 
 .body-wrapping-div {
@@ -36,7 +37,7 @@ body {
     }
 }
 
-h1, h2, h3, p, a, td {
+h1, h2, h3, p, a, th, td {
     font-family: 'Noto Sans', sans-serif;
     color: colors.$font;
 }
