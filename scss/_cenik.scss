@@ -5,16 +5,30 @@
     margin: 1em auto 15% auto;
     display: flex;
     flex-direction: column;
+    max-width: dimensions.$maxWidth;
+
+    @media screen and (min-width: dimensions.$desktop) {
+        border: 2px solid colors.$font;        
+    }
+
 }
 
 .price-list {
-    max-width: dimensions.$maxWidth; ///why not cenik?
     align-self: center;
     padding: 0 0 1em 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 
     & table {
         padding: 1em 0;
-        border-spacing: 1em;
+        border-spacing: 0 1em;
+        width: 100%;
+        align-self: center;
+
+        @media screen and (min-width: dimensions.$desktop) {
+            width: 70%;
+        }
     }
 
     & th {
@@ -24,6 +38,11 @@
     & tr:is(:hover,
     :focus, :active) {
         text-decoration: underline;
+    }
+
+    & tr.price-list__subtitle:is(:hover,
+    :focus, :active) {
+        text-decoration: none;
     }
 
     & td {
@@ -38,12 +57,16 @@
 
     & h1 {
         text-align: center;
+
+        &:first-child {
+            padding-top: 2em;
+        }
     }
 
     &::after {
         content: "";
         display: block;
-        width: calc(dimensions.$maxWidth*0.8);
+        width: calc(dimensions.$maxWidth*0.7);
         height: 1px;
         background-color: colors.$font;
         margin: 2em auto 2em auto;
@@ -51,7 +74,11 @@
 }
 
 .price-disclaimer {
-    max-width: dimensions.$maxWidth; ///why not cenik?
     align-self: center;
+    text-align: justify;
     font-weight: 700;
+
+    @media screen and (min-width: dimensions.$desktop) {
+        width: 70%;
+    }
 }

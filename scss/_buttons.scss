@@ -6,29 +6,45 @@
     text-transform: uppercase;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
-    font-size: 30px;
+    font-size: 25px;
     letter-spacing: 0.2em;
     display: block;
-    margin: 40px auto;
+    margin: 2em auto;
     color: colors.$background;
     background-color: colors.$accent-dark;
     border: none;
 
+    @media screen and (min-width: dimensions.$desktop) {
+        font-size: 30px;
+    }
     
     &:is(:hover,
     :focus, :active) {
-        font-weight: 400;
-        box-shadow: 4px 4px 8px colors.$font;
+        background-color: colors.$hover;
     }
-
-    @media screen and (min-width: dimensions.$desktop) {
-        
-         
-    }//////!!!!!!
 }
 
 .button--small {
-    grid-column: 1 / -1;
-    grid-row: 3 / -1;
+    padding: 0.5em 1.2em;
+    text-transform: uppercase;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    letter-spacing: 0.2em;
+    display: block;
+    margin: 2em auto;
+    color: colors.$background;
+    background-color: colors.$accent-dark;
+    border: none;
+
+    @media screen and (min-width: dimensions.$desktop) {
+        margin: 0 auto auto auto;
+        font-size: 30px;
+    }
+    
+    &:is(:hover,
+    :focus, :active) {
+        background-color: colors.$hover;
+    }
 }
 

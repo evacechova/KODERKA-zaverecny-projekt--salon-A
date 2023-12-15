@@ -65,27 +65,58 @@
   text-transform: uppercase;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 0.2em;
   display: block;
-  margin: 40px auto;
+  margin: 2em auto;
   color: #FCFCFB;
   background-color: #8D857C;
   border: none;
 }
+@media screen and (min-width: 1024px) {
+  .button--main {
+    font-size: 30px;
+  }
+}
 .button--main:is(:hover,
 :focus, :active) {
-  font-weight: 400;
-  box-shadow: 4px 4px 8px #2E292B;
+  background-color: #6D665F;
 }
+
 .button--small {
-  grid-column: 1/-1;
-  grid-row: 3/-1;
+  padding: 0.5em 1.2em;
+  text-transform: uppercase;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  letter-spacing: 0.2em;
+  display: block;
+  margin: 2em auto;
+  color: #FCFCFB;
+  background-color: #8D857C;
+  border: none;
+}
+@media screen and (min-width: 1024px) {
+  .button--small {
+    margin: 0 auto auto auto;
+    font-size: 30px;
+  }
+}
+.button--small:is(:hover,
+:focus, :active) {
+  background-color: #6D665F;
+}
+
+.index {
+  margin: 1em auto 15% auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
 }
 
 .plain-text {
   margin: 0;
-  padding: 1em 25%;
+  padding: 1em 1em;
   text-align: center;
 }
 .plain-text:last-child {
@@ -150,8 +181,9 @@
 }
 
 .contact-box {
-  margin: 1em 5%;
-  padding: 5% 5%;
+  margin: 1em auto 15% auto;
+  /*margin: 1em 5%;
+  padding: 5% 5%;*/
 }
 @media screen and (min-width: 1024px) {
   .contact-box {
@@ -159,6 +191,9 @@
     margin: auto;
     max-width: 70%;
   }
+}
+.contact-box h1 {
+  padding-top: 2em;
 }
 .contact-box h1, .contact-box h2 {
   display: flex;
@@ -179,7 +214,7 @@
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 1fr;
     max-width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 2em auto;
   }
 }
 .contact-box__text .opening-hours {
@@ -225,16 +260,31 @@
   margin: 1em auto 15% auto;
   display: flex;
   flex-direction: column;
+  max-width: 80%;
+}
+@media screen and (min-width: 1024px) {
+  .cenik {
+    border: 2px solid #2E292B;
+  }
 }
 
 .price-list {
-  max-width: 80%;
   align-self: center;
   padding: 0 0 1em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .price-list table {
   padding: 1em 0;
-  border-spacing: 1em;
+  border-spacing: 0 1em;
+  width: 100%;
+  align-self: center;
+}
+@media screen and (min-width: 1024px) {
+  .price-list table {
+    width: 70%;
+  }
 }
 .price-list th {
   padding: 1em 0 0.5em 0;
@@ -242,6 +292,10 @@
 .price-list tr:is(:hover,
 :focus, :active) {
   text-decoration: underline;
+}
+.price-list tr.price-list__subtitle:is(:hover,
+:focus, :active) {
+  text-decoration: none;
 }
 .price-list td {
   max-width: 60vw;
@@ -254,19 +308,27 @@
 .price-list h1 {
   text-align: center;
 }
+.price-list h1:first-child {
+  padding-top: 2em;
+}
 .price-list::after {
   content: "";
   display: block;
-  width: 64%;
+  width: 56%;
   height: 1px;
   background-color: #2E292B;
   margin: 2em auto 2em auto;
 }
 
 .price-disclaimer {
-  max-width: 80%;
   align-self: center;
+  text-align: justify;
   font-weight: 700;
+}
+@media screen and (min-width: 1024px) {
+  .price-disclaimer {
+    width: 70%;
+  }
 }
 
 .body-wrapping-div {

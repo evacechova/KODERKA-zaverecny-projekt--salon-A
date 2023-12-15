@@ -2,7 +2,7 @@
 @use 'dimensions';
 
 .nas-tym {
-    margin: 1em auto 15% auto;
+    margin: dimensions.$pageMargin;
 }
 
 .profile-card {

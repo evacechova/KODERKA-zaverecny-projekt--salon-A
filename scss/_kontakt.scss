@@ -2,13 +2,18 @@
 @use 'dimensions';
 
 .contact-box {
-    margin: 1em 5%;
-    padding: 5% 5%;
+    margin: dimensions.$pageMargin;
+    /*margin: 1em 5%;
+    padding: 5% 5%;*/
 
     @media screen and (min-width: dimensions.$desktop) {
         border: 2px solid colors.$font;
         margin: auto;
         max-width: 70%;       
+    }
+
+    & h1 {
+        padding-top: 2em;
     }
 
     & h1, h2 {
@@ -31,7 +36,7 @@
         grid-template-columns: repeat(2, auto);
         grid-template-rows: 1fr;
         max-width: 80%;
-        margin: 0 auto;        
+        margin: 0 auto 2em auto;        
     }
 
     .opening-hours {
