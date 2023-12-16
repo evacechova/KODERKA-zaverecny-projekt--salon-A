@@ -8,9 +8,9 @@
     max-width: dimensions.$maxWidth;
 
     @media screen and (min-width: dimensions.$desktop) {
-        border: 2px solid colors.$font;        
+        border: 2px solid colors.$font; 
+        padding: 4em;       
     }
-
 }
 
 .price-list {
@@ -57,10 +57,6 @@
 
     & h1 {
         text-align: center;
-
-        &:first-child {
-            padding-top: 2em;
-        }
     }
 
     &::after {

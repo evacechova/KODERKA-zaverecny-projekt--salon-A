@@ -210,10 +210,8 @@
     border: 2px solid #2E292B;
     margin: auto;
     max-width: 70%;
+    padding: 4em;
   }
-}
-.contact-box h1 {
-  padding-top: 2em;
 }
 .contact-box h1, .contact-box h2 {
   display: flex;
@@ -234,7 +232,7 @@
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 1fr;
     max-width: 80%;
-    margin: 0 auto 2em auto;
+    margin: 0 auto;
   }
 }
 .contact-box__text .opening-hours {
@@ -285,6 +283,7 @@
 @media screen and (min-width: 1024px) {
   .cenik {
     border: 2px solid #2E292B;
+    padding: 4em;
   }
 }
 
@@ -327,9 +326,6 @@
 }
 .price-list h1 {
   text-align: center;
-}
-.price-list h1:first-child {
-  padding-top: 2em;
 }
 .price-list::after {
   content: "";
