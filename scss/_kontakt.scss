@@ -3,9 +3,7 @@
 
 .contact-box {
     margin: dimensions.$pageMargin;
-    /*margin: 1em 5%;
-    padding: 5% 5%;*/
-
+    
     @media screen and (min-width: dimensions.$desktop) {
         border: 2px solid colors.$font;
         margin: auto;
@@ -20,7 +18,7 @@
 
     & a:is(:hover,
     :focus, :active) {
-        color: colors.$accent-dark; /////!!!!
+        color: colors.$accent-dark;
     }
 }
 
@@ -74,7 +72,7 @@
     }
 
     & p {
-        margin: 0; /////remake into global setting?
+        margin: 0; /////global setting???
         text-align: center;
     }
 }

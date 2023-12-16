@@ -257,8 +257,6 @@
 
 .contact-box {
   margin: 1em auto 15% auto;
-  /*margin: 1em 5%;
-  padding: 5% 5%;*/
 }
 @media screen and (min-width: 1024px) {
   .contact-box {

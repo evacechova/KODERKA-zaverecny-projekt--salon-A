@@ -3,7 +3,7 @@ layout: layouts/main-layout.njk
 ---
 
 <div class="top-panel">
-<!-- vložíme hlavičku stránky -->
+<!-- hlavička stránky -->
 {% include 'partials/header.njk' %}
 
 <!--menu-->
@@ -13,7 +13,7 @@ layout: layouts/main-layout.njk
 <main class="main">
 
 	<!--
-		zde se vloží obsah stránky (nebo šablony),
+		obsah stránky (nebo šablony),
 		která používá tuto šablonu
 	-->
 	{{ content | safe }}
@@ -21,5 +21,5 @@ layout: layouts/main-layout.njk
 </main>
 
 
-<!-- vložíme patičku stránky -->
+<!-- patička stránky -->
 {% include 'partials/footer.njk' %}
