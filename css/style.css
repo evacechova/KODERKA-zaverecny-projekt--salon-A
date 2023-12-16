@@ -33,7 +33,6 @@
     width: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     position: absolute;
     top: 25px;
     right: 0;
@@ -92,6 +91,8 @@
   text-transform: lowercase;
   text-wrap: nowrap;
   color: #FCFCFB;
+  display: block;
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
   .menu__link {
