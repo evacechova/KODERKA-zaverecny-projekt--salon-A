@@ -4,46 +4,64 @@
 .menu {
     background-color: colors.$accent-dark;
     overflow: hidden;
-    padding: 0;
+    margin-top: -4px;
 
     @media screen and (min-width: dimensions.$desktop) {
         width: fit-content;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-around; ////?///
         position: absolute;
         top: 25px;
         right: 0;
+        background-color: transparent;
         }
     
     &__list {
         display: none;
         list-style-type: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
         font-size: 1.2em;
         text-decoration: none;
+        transition: transform 0.3s ease;
 
         @media screen and (min-width: dimensions.$desktop) {
-            display: block;
+            display: flex;
         }
     }
 
     &__list.show {
         display: flex;
         flex-direction: column;
+        padding-bottom: 2em;
     }
 
     &__hamburger {
         cursor: pointer;
         color: colors.$background;
+        padding: 0.5em 1em;
+
+        @media screen and (min-width: dimensions.$desktop) {
+            display: none;
+        }
     }
 
     &__item {
-        position: relative;
+        padding: 0 3em;
+        
+        @media screen and (min-width: dimensions.$desktop) {
+            position: relative;
+            padding: 2px 3em;           
+        }
+    }
+
+    &__item:is(:hover,
+    :focus, :active) {
+        background-color: colors.$hover;
 
         @media screen and (min-width: dimensions.$desktop) {
-            margin: 0 2em;
+            background-color: transparent;
         }
     }
 
@@ -51,17 +69,29 @@
         text-transform: lowercase;
         text-wrap: nowrap;
         color: colors.$background;
+
+        @media screen and (min-width: dimensions.$desktop) {
+            color: colors.$font;
+        }
     }
 
-    &__item:is(:hover,
+    &__link:is(:hover,
     :focus, :active) {
-        background-color: colors.$hover;
+        
+        @media screen and (min-width: dimensions.$desktop) {
+            color: colors.$accent-light;
+        }
     }
 
     &__glyph {
         max-width: 29px;
-        position: absolute;
-        right: 7em;
+        display: none;
+        
+        @media screen and (min-width: dimensions.$desktop) {
+            display: block;
+            position: absolute;
+            right: 10em;
+        }
     }
 }
 

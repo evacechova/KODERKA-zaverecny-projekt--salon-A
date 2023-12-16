@@ -1,14 +1,16 @@
 @charset "UTF-8";
 .header {
   margin-top: 1em;
-  /*position: relative;*/
 }
 .header__link {
   text-decoration: none;
   font-size: 40px;
-  padding: 0 0 0 0.5em;
-  /*position: absolute;
-  z-index: 1;*/
+  padding: 0 0.5em;
+}
+@media screen and (min-width: 1024px) {
+  .header__link {
+    padding: 0 1.5em;
+  }
 }
 .header__link-a {
   font-family: "Luxurious Script", cursive;
@@ -18,15 +20,12 @@
   height: auto;
   width: 100%;
   border: 1px solid #CAC1B0;
-  /*position: absolute;
-  z-index: 0;
-  top: 46px;*/
 }
 
 .menu {
   background-color: #8D857C;
   overflow: hidden;
-  padding: 0;
+  margin-top: -4px;
 }
 @media screen and (min-width: 1024px) {
   .menu {
@@ -38,35 +37,55 @@
     position: absolute;
     top: 25px;
     right: 0;
+    background-color: transparent;
   }
 }
 .menu__list {
   display: none;
   list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-size: 1.2em;
   text-decoration: none;
+  transition: transform 0.3s ease;
 }
 @media screen and (min-width: 1024px) {
   .menu__list {
-    display: block;
+    display: flex;
   }
 }
 .menu__list.show {
   display: flex;
   flex-direction: column;
+  padding-bottom: 2em;
 }
 .menu__hamburger {
   cursor: pointer;
   color: #FCFCFB;
+  padding: 0.5em 1em;
+}
+@media screen and (min-width: 1024px) {
+  .menu__hamburger {
+    display: none;
+  }
 }
 .menu__item {
-  position: relative;
+  padding: 0 3em;
 }
 @media screen and (min-width: 1024px) {
   .menu__item {
-    margin: 0 2em;
+    position: relative;
+    padding: 2px 3em;
+  }
+}
+.menu__item:is(:hover,
+:focus, :active) {
+  background-color: #6D665F;
+}
+@media screen and (min-width: 1024px) {
+  .menu__item:is(:hover,
+  :focus, :active) {
+    background-color: transparent;
   }
 }
 .menu__link {
@@ -74,14 +93,27 @@
   text-wrap: nowrap;
   color: #FCFCFB;
 }
-.menu__item:is(:hover,
-:focus, :active) {
-  background-color: #6D665F;
+@media screen and (min-width: 1024px) {
+  .menu__link {
+    color: #2E292B;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__link:is(:hover,
+  :focus, :active) {
+    color: #CAC1B0;
+  }
 }
 .menu__glyph {
   max-width: 29px;
-  position: absolute;
-  right: 7em;
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .menu__glyph {
+    display: block;
+    position: absolute;
+    right: 10em;
+  }
 }
 
 .footer {
@@ -90,7 +122,6 @@
   font-size: 0.7em;
   text-align: center;
   background-color: #CAC1B0;
-  border: 1px solid #CAC1B0;
   position: absolute;
   bottom: 0;
   margin-top: 5%;
