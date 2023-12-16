@@ -154,6 +154,10 @@
     display: grid;
     grid-template-columns: 1fr minmax(0, 0.5fr) 1fr;
     grid-template-rows: repeat(2, auto);
+    padding-bottom: 3em;
+  }
+  .profile-card:last-child {
+    padding-bottom: 1em;
   }
 }
 .profile-card__text {

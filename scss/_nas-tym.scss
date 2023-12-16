@@ -15,6 +15,11 @@
         display: grid;
         grid-template-columns: 1fr minmax(0, 0.5fr) 1fr;
         grid-template-rows: repeat(2, auto);
+        padding-bottom: 3em;
+
+        &:last-child {
+            padding-bottom: 1em;
+        }
     }
 
     &__text {
