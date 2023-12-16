@@ -2,36 +2,60 @@
 @use 'dimensions';
 
 .menu {
-    list-style-type: none;
-    width: fit-content;
-    margin: 0;
-    font-size: 1.2em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    background-color: colors.$accent-dark;
+    overflow: hidden;
+    padding: 0;
 
     @media screen and (min-width: dimensions.$desktop) {
+        width: fit-content;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         position: absolute;
         top: 25px;
         right: 0;
-    }   
+        }
+    
+    &__list {
+        display: none;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.2em;
+        text-decoration: none;
+
+        @media screen and (min-width: dimensions.$desktop) {
+            display: block;
+        }
+    }
+
+    &__list.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__hamburger {
+        cursor: pointer;
+        color: colors.$background;
+    }
 
     &__item {
-        margin: 0 2em;
         position: relative;
+
+        @media screen and (min-width: dimensions.$desktop) {
+            margin: 0 2em;
+        }
     }
 
     &__link {
         text-transform: lowercase;
         text-wrap: nowrap;
+        color: colors.$background;
     }
 
-    &__link:is(:hover,
+    &__item:is(:hover,
     :focus, :active) {
-        color: colors.$accent-dark;
+        background-color: colors.$hover;
     }
 
     &__glyph {
