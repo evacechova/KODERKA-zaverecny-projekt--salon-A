@@ -1,5 +1,5 @@
-@use 'colors';
-@use 'dimensions';
+@use '../abstracts/colors' as colors;
+@use '../abstracts/dimensions' as dimensions;
 
 .nas-tym {
     margin: dimensions.$pageMargin;

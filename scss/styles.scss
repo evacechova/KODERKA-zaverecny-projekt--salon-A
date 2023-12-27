@@ -1,13 +1,8 @@
-@use 'colors';
-@use 'dimensions';
-@use 'header';
-@use 'menu';
-@use 'footer';
-@use 'buttons';
-@use 'index';
-@use 'nas-tym';
-@use 'kontakt';
-@use 'cenik';
+@use 'abstracts/colors' as colors;
+@use 'abstracts/dimensions' as dimensions;
+@use 'layout';
+@use 'components';
+@use 'pages';
 
 .top-panel {
     position: relative;
