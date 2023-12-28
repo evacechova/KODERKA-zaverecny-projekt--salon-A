@@ -1,3 +1,6 @@
+@use 'colors';
+
 $desktop: 1024px;
 $maxWidth: 80%;
 $pageMargin: 1em auto 15% auto;
+$border: 2px dotted colors.$font;

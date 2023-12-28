@@ -199,7 +199,7 @@
 }
 @media screen and (min-width: 1024px) {
   .contact-box {
-    border: 2px solid #2E292B;
+    border: 2px dotted #2E292B;
     margin: auto;
     max-width: 70%;
     padding: 4em;
@@ -274,7 +274,7 @@
 }
 @media screen and (min-width: 1024px) {
   .cenik {
-    border: 2px solid #2E292B;
+    border: 2px dotted #2E292B;
     padding: 4em;
   }
 }

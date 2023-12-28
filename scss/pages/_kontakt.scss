@@ -5,7 +5,7 @@
     margin: dimensions.$pageMargin;
     
     @media screen and (min-width: dimensions.$desktop) {
-        border: 2px solid colors.$font;
+        border: dimensions.$border;
         margin: auto;
         max-width: 70%;
         padding: 4em;       

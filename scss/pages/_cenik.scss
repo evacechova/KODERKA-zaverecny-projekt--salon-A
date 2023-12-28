@@ -8,7 +8,7 @@
     max-width: dimensions.$maxWidth;
 
     @media screen and (min-width: dimensions.$desktop) {
-        border: 2px solid colors.$font; 
+        border: dimensions.$border;
         padding: 4em;       
     }
 }
