@@ -302,11 +302,11 @@
 }
 .price-list tr:is(:hover,
 :focus, :active) {
-  text-decoration: underline;
+  background-color: #E5E5E0;
 }
 .price-list tr.price-list__subtitle:is(:hover,
 :focus, :active) {
-  text-decoration: none;
+  background-color: initial;
 }
 .price-list td {
   max-width: 60vw;
@@ -323,8 +323,9 @@
   content: "";
   display: block;
   width: 56%;
-  height: 1px;
-  background-color: #2E292B;
+  height: 0;
+  border-bottom: 2px dotted #2E292B;
+  background-color: transparent;
   margin: 2em auto 2em auto;
 }
 

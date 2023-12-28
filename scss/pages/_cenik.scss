@@ -37,12 +37,12 @@
 
     & tr:is(:hover,
     :focus, :active) {
-        text-decoration: underline;
+        background-color: colors.$hover-light;
     }
 
     & tr.price-list__subtitle:is(:hover,
     :focus, :active) {
-        text-decoration: none;
+        background-color: initial;
     }
 
     & td {
@@ -63,8 +63,9 @@
         content: "";
         display: block;
         width: calc(dimensions.$maxWidth*0.7);
-        height: 1px;
-        background-color: colors.$font;
+        height: 0;
+        border-bottom: dimensions.$border;
+        background-color: transparent;
         margin: 2em auto 2em auto;
     }
 }
