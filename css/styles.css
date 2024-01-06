@@ -218,6 +218,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(2, auto);
+  padding-bottom: 3em;
 }
 @media screen and (min-width: 1024px) {
   .contact-box__text {
@@ -264,6 +265,18 @@
 .contact-box__text p {
   margin: 0;
   text-align: center;
+}
+
+.google-map {
+  padding-bottom: 50%;
+  position: relative;
+}
+.google-map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
 }
 
 .cenik {

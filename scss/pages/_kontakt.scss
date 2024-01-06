@@ -26,6 +26,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
+    padding-bottom: 3em;
 
     @media screen and (min-width: dimensions.$desktop) {
         grid-template-columns: repeat(2, auto);
@@ -74,5 +75,18 @@
     & p {
         margin: 0; /////global setting???
         text-align: center;
+    }
+}
+
+.google-map {
+    padding-bottom: 50%;
+    position: relative;
+
+    & iframe {
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
     }
 }
