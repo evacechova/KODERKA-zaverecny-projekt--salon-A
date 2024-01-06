@@ -26,13 +26,13 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, auto);
-    padding-bottom: 3em;
 
     @media screen and (min-width: dimensions.$desktop) {
         grid-template-columns: repeat(2, auto);
         grid-template-rows: 1fr;
         max-width: 80%;
-        margin: 0 auto;        
+        margin: 0 auto; 
+        padding-bottom: 3em;       
     }
 
     .opening-hours {
@@ -53,7 +53,7 @@
     .address {
         grid-column: 1 / -1;
         grid-row: 2 / 3;
-        margin-bottom: 15%;
+        margin-bottom: 5%;
 
         @media screen and (min-width: dimensions.$desktop) {
             grid-column: 2 / -1;
@@ -80,7 +80,7 @@
 .google-map {
     padding-bottom: 50%;
     position: relative;
-
+    
     & iframe {
         height: 100%;
         width: 100%;
