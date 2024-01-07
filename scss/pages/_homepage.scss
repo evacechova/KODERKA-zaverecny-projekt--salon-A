@@ -17,3 +17,21 @@
         padding-bottom: 2em;
     }
 }
+
+.homepage-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 4em;
+
+    &__photo {
+        max-height: 600px;
+        overflow: hidden;
+        
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
