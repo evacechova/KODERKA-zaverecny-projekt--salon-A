@@ -199,7 +199,7 @@
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   grid-gap: 0.5em;
-  padding-bottom: 2em;
+  padding-bottom: 3em;
 }
 @media screen and (min-width: 1024px) {
   .homepage-gallery {
