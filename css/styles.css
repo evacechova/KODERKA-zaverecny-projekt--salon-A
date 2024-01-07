@@ -198,7 +198,12 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
-  grid-gap: 4em;
+  grid-gap: 0.5em;
+}
+@media screen and (min-width: 1024px) {
+  .homepage-gallery {
+    grid-gap: 4em;
+  }
 }
 .homepage-gallery__photo {
   max-height: 600px;
