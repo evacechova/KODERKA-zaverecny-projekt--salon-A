@@ -1,7 +1,8 @@
 # KODERKA-zaverecny-projekt
 
-- web má verzi pro mobil a pro počítač
-- hamburger menu je uděláno pomocí JS
-- objednávací tlačítka do budoucna povedou na objednací formulář
+Závěrečný projekt vytvořený pro kurz Czechitas s názvem Staň se kodérkou (podzim 2023). Kurz jsem tímto projektem úspěšně ukončila k 19. prosinci 2023. Projekt jsem následně dále vylepšovala o další prvky a kosmetické úpravy.
 
-!kód může obsahovat poznámky pro budoucí úpravy a dodělávky!
+- web zahrnuje pouze front-end s minimem JS např. pro hamburger menu (JS nebyl součástí kurzu, učím se nyní samostudiem)
+- web má verzi pro mobil a pro počítač
+- kód může obsahovat poznámky pro budoucí úpravy a dodělávky!
+    - do budoucna plánuji například přidat další obrázky a upravit dle toho tlačítka (dvě velikosti)
