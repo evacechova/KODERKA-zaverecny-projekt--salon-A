@@ -139,7 +139,7 @@
   font-size: 25px;
   letter-spacing: 0.2em;
   display: block;
-  margin: 2em auto;
+  margin: 1em auto;
   color: #FCFCFB;
   background-color: #8D857C;
   border: none;
@@ -162,7 +162,7 @@
   font-size: 25px;
   letter-spacing: 0.2em;
   display: block;
-  margin: 2em auto;
+  margin: 1em auto;
   color: #FCFCFB;
   background-color: #8D857C;
   border: none;
@@ -200,11 +200,13 @@
   grid-template-rows: repeat(2, auto);
   grid-gap: 0.5em;
   padding-bottom: 3em;
+  margin: 1em auto;
 }
 @media screen and (min-width: 1024px) {
   .homepage-gallery {
     grid-gap: 4em;
     padding-bottom: 0;
+    margin: 4em auto 0 auto;
   }
 }
 .homepage-gallery__photo {
@@ -293,6 +295,12 @@
 .google-map {
   padding-bottom: 50%;
   position: relative;
+  margin: 1em auto 4em auto;
+}
+@media screen and (min-width: 1024px) {
+  .google-map {
+    margin: 0;
+  }
 }
 .google-map iframe {
   height: 100%;

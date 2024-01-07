@@ -80,6 +80,11 @@
 .google-map {
     padding-bottom: 50%;
     position: relative;
+    margin: 1em auto 4em auto;
+
+    @media screen and (min-width: dimensions.$desktop) {
+    margin: 0;
+    }
     
     & iframe {
         height: 100%;
