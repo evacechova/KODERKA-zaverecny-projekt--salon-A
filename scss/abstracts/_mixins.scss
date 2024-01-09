@@ -1,0 +1,4 @@
+@mixin hover($ease) {
+    border-radius: 50px;
+    transition: border-radius $ease ease;
+}

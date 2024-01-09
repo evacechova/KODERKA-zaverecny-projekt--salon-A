@@ -1,5 +1,7 @@
 @use '../abstracts/colors' as colors;
 @use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/mixins' as mixins;
+
 
 .index {
     margin: dimensions.$pageMargin;
@@ -27,15 +29,34 @@
     margin: 1em auto;
 
     @media screen and (min-width: dimensions.$desktop) {
-        grid-gap: 4em;
+        grid-template-columns: repeat(6, auto);
+        grid-template-rows: 1fr;
+        grid-gap: 0.5em;
         padding-bottom: 0;
         margin: 4em auto 0 auto;
     }
 
     &__photo {
-        max-height: 600px;
+        max-height: 300px;
         overflow: hidden;
+
+        @media screen and (min-width: dimensions.$desktop) {
+            min-height: 400px;
+        }
         
+        &.photo--desktop {
+            display: none;
+        
+            @media screen and (min-width: dimensions.$desktop) {
+                display: block;
+            }
+        }
+
+        &:is(:hover,
+        :focus, :active) {
+            @include mixins.hover(0.5s);
+        }
+
         & img {
             width: 100%;
             height: 100%;
@@ -43,3 +64,4 @@
         }
     }
 }
+

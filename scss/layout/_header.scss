@@ -1,5 +1,6 @@
 @use '../abstracts/colors' as colors;
 @use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/mixins' as mixins;
 
 .header {
     margin-top: 1em;

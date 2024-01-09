@@ -1,5 +1,6 @@
 @use '../abstracts/colors' as colors;
 @use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/mixins' as mixins;
 
 .menu {
     background-color: colors.$accent-dark;
