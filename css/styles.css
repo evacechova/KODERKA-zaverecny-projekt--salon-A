@@ -133,11 +133,11 @@
 
 .button--main {
   padding: 0.5em 1.2em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   font-size: 25px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   display: block;
   margin: 1em auto;
   color: #FCFCFB;
@@ -154,15 +154,16 @@
   background-color: #6D665F;
   border-radius: 50px;
   transition: border-radius 1s ease;
+  cursor: pointer;
 }
 
 .button--small {
   padding: 0.5em 1.2em;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   font-size: 25px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   display: block;
   margin: 1em auto;
   color: #FCFCFB;
@@ -179,7 +180,41 @@
 :focus, :active) {
   background-color: #6D665F;
   border-radius: 50px;
-  transition: border-radius 0.5s ease;
+  transition: border-radius 1s ease;
+  cursor: pointer;
+}
+
+.modal {
+  width: 70vw;
+  border: 2px dotted #2E292B;
+  background-color: #FCFCFB;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .modal {
+    max-width: 50vw;
+  }
+}
+.modal h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.modal__close img {
+  width: 1em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+.modal__text {
+  text-align: justify;
+  padding: 1em 4em;
+}
+
+.form {
+  display: flex;
+  border: 2px dotted #2E292B;
+  margin: 1em 4em;
+  padding: 1em;
 }
 
 .index {

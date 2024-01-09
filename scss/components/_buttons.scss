@@ -4,17 +4,17 @@
 
 .button--main {
     padding: 0.5em 1.2em;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
     font-size: 25px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     display: block;
     margin: 1em auto;
     color: colors.$background;
     background-color: colors.$accent-dark;
     border: none;
-
+    
     @media screen and (min-width: dimensions.$desktop) {
         font-size: 30px;
     }
@@ -23,16 +23,17 @@
     :focus, :active) {
         background-color: colors.$hover;
         @include mixins.hover(1s);
+        cursor: pointer;
     }
 }
 
 .button--small {
     padding: 0.5em 1.2em;
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-family: 'Noto Sans', sans-serif;
     font-weight: 300;
     font-size: 25px;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     display: block;
     margin: 1em auto;
     color: colors.$background;
@@ -47,7 +48,8 @@
     &:is(:hover,
     :focus, :active) {
         background-color: colors.$hover;
-        @include mixins.hover(0.5s);
+        @include mixins.hover(1s);
+        cursor: pointer;
     }
 }
 

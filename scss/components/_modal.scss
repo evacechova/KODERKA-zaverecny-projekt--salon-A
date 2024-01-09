@@ -1,0 +1,38 @@
+@use '../abstracts/colors' as colors;
+@use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/mixins' as mixins;
+
+.modal {
+    width: calc(100vw*0.7);
+    border: dimensions.$border;
+    background-color: colors.$background;
+    position: relative;
+
+    @media screen and (min-width: dimensions.$desktop) {
+        max-width: calc(100vw*0.5)
+    }
+
+    & h2 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__close img {
+        width: 1em;
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+
+    &__text {
+        text-align: justify;
+        padding: 1em 4em;
+    }
+}
+
+.form {
+    display: flex;
+    border: dimensions.$border;
+    margin: 1em 4em;
+    padding: 1em;
+}
