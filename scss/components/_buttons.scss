@@ -20,7 +20,7 @@
     }
     
     &:is(:hover,
-    :focus, :active) {
+    :focus,:active) {
         background-color: colors.$hover;
         @include mixins.hover(1s);
         cursor: pointer;
