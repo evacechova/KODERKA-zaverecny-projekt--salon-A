@@ -16,7 +16,7 @@
 .header__link:is(:hover,
 :focus, :active) {
   color: #8D857C;
-  background-size: 80% 1px;
+  background-size: 65% 1px;
 }
 @media screen and (min-width: 1024px) {
   .header__link {
@@ -25,7 +25,7 @@
   }
   .header__link:is(:hover,
   :focus, :active) {
-    background-size: 60% 1px;
+    background-size: 45% 1px;
   }
 }
 .header__link-a {
@@ -69,6 +69,9 @@
     position: absolute;
     top: 25px;
     right: 0;
+    background-color: transparent;
+  }
+  .menu:is(:hover, :focus, :active) {
     background-color: transparent;
   }
 }
@@ -130,12 +133,23 @@
 @media screen and (min-width: 1024px) {
   .menu__link {
     color: #2E292B;
+    background-image: linear-gradient(90deg, #8D857C, #CAC1B0);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: center 1.5em;
+    padding-block: 0.25em;
+    transition: color 500ms, background-size 500ms;
+  }
+  .menu__link:is(:hover,
+  :focus, :active) {
+    color: #8D857C;
+    background-size: 75% 1px;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu__link:is(:hover,
   :focus, :active) {
-    color: #CAC1B0;
+    color: #8D857C;
   }
 }
 .menu__glyph {

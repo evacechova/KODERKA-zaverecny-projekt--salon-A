@@ -19,7 +19,11 @@
         top: 25px;
         right: 0;
         background-color: transparent;
+
+        &:is(:hover, :focus, :active) {
+            background-color: transparent;
         }
+    }
     
     &__list {
         display: none;
@@ -78,6 +82,12 @@
 
         @media screen and (min-width: dimensions.$desktop) {
             color: colors.$font;
+            @include mixins.underline(colors.$accent-dark, colors.$accent-light, center);
+
+            &:is(:hover,
+            :focus, :active) {
+                @include mixins.underlineHover(colors.$accent-dark, 75%);
+            }
         }
     }
 
@@ -85,7 +95,7 @@
     :focus, :active) {
         
         @media screen and (min-width: dimensions.$desktop) {
-            color: colors.$accent-light;
+            color: colors.$accent-dark;
         }
     }
 
