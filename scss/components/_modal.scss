@@ -3,7 +3,7 @@
 @use '../abstracts/mixins' as mixins;
 
 .modal {
-    width: calc(100vw*0.65);
+    width: calc(100vw*0.7);
     border: dimensions.$border;
     background-color: colors.$background;
     position: relative;
@@ -18,17 +18,18 @@
     }
 
     &__close img {
-        width: 1.2em;
+        width: 1.4em;
         position: absolute;
         top: 1.5em;
         right: 1.5em;
+        border: solid 0px colors.$hover-shadow;
+        border-radius: 50%;                
 
         &:is(:hover,
             :focus, :active) {
-                border: dotted 0.5px colors.$accent-dark;
-                border-radius: 50%;
-                scale: 1.4;
-                transition: scale 1s, border 1s;
+                border: 5px;
+                background-color: colors.$hover-shadow;
+                transition: border 500ms ease, background-color 500ms ease;
             }        
     }
 
@@ -48,9 +49,19 @@
 }
 
 .form {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     border: dimensions.$border;
     margin: 1em 4em;
     padding: 1em;
+
+    &__label {
+        @include mixins.font;
+        margin: 0.2em;
+    }
+
+    &__item {
+        @include mixins.font;
+    }
 }

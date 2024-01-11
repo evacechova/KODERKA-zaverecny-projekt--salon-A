@@ -205,7 +205,7 @@
 }
 
 .modal {
-  width: 65vw;
+  width: 70vw;
   border: 2px dotted #2E292B;
   background-color: #FCFCFB;
   position: relative;
@@ -220,17 +220,18 @@
   text-align: center;
 }
 .modal__close img {
-  width: 1.2em;
+  width: 1.4em;
   position: absolute;
   top: 1.5em;
   right: 1.5em;
+  border: solid 0px #e4e4e3;
+  border-radius: 50%;
 }
 .modal__close img:is(:hover,
 :focus, :active) {
-  border: dotted 0.5px #8D857C;
-  border-radius: 50%;
-  scale: 1.4;
-  transition: scale 1s, border 1s;
+  border: 5px;
+  background-color: #e4e4e3;
+  transition: border 500ms ease, background-color 500ms ease;
 }
 .modal__text {
   text-align: justify;
@@ -251,11 +252,21 @@
 }
 
 .form {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
   border: 2px dotted #2E292B;
   margin: 1em 4em;
   padding: 1em;
+}
+.form__label {
+  font-family: "Noto Sans", sans-serif;
+  color: #2E292B;
+  margin: 0.2em;
+}
+.form__item {
+  font-family: "Noto Sans", sans-serif;
+  color: #2E292B;
 }
 
 .index {

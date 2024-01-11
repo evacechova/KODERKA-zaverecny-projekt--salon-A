@@ -1,3 +1,11 @@
+@use 'colors';
+@use 'dimensions';
+
+@mixin font {
+    font-family: 'Noto Sans', sans-serif;
+    color: colors.$font;
+}
+
 @mixin hover($ease) {
     border-radius: 50px;
     transition: border-radius $ease ease;
