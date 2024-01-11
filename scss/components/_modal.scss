@@ -37,19 +37,11 @@
         padding: 1em 4em;
 
         &--undelined {
-            background-image: linear-gradient(90deg, colors.$accent-dark, colors.$accent-light);
-            background-size: 0% 1px;
-            background-repeat: no-repeat;
-            background-position: left 1.5em;
-            padding-block: 0.25em;
-
-            transition: color 500ms, background-size 500ms;
+            @include mixins.underline(colors.$accent-dark, colors.$accent-light);
         
             &:is(:hover,
             :focus, :active) {
-                color: colors.$accent-dark;
-                background-size: 100% 3px;
-                cursor: default;
+                @include mixins.underlineHover(colors.$accent-dark);
             }
         }
     }

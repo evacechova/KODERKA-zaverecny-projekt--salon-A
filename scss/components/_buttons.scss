@@ -14,16 +14,33 @@
     color: colors.$background;
     background-color: colors.$accent-dark;
     border: none;
+    position: relative;
     
     @media screen and (min-width: dimensions.$desktop) {
         font-size: 30px;
     }
-    
-    &:is(:hover,
+
+      &:is(:hover,
     :focus,:active) {
         background-color: colors.$hover;
         @include mixins.hover(1s);
         cursor: pointer;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0.6em;
+        left: 1.5em;
+        background-color: colors.$background;
+        transition: width 500ms ease;
+    }
+
+    &:is(:hover,
+    :focus,:active)::after {
+        width: 70%;
     }
 }
 
@@ -53,3 +70,7 @@
     }
 }
 
+.button--send:is(:hover,
+:focus,:active)::after {
+    width: 55%;
+}

@@ -17,9 +17,13 @@
         justify-content: center;
     }
 
+    & a {
+        @include mixins.underline (colors.$accent-dark, colors.$accent-light);
+    }
+
     & a:is(:hover,
     :focus, :active) {
-        color: colors.$accent-dark;
+        @include mixins.underlineHover(colors.$accent-dark);
     }
 }
 
