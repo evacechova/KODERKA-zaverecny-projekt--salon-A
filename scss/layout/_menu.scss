@@ -7,6 +7,10 @@
     overflow: hidden;
     margin-top: -4px;
 
+    &:is(:hover, :focus, :active) {
+        background-color: colors.$hover;
+    }
+
     @media screen and (min-width: dimensions.$desktop) {
         width: fit-content;
         display: flex;
@@ -58,7 +62,7 @@
 
     &__item:is(:hover,
     :focus, :active) {
-        background-color: colors.$hover;
+        background-color: colors.$accent-dark;
 
         @media screen and (min-width: dimensions.$desktop) {
             background-color: transparent;

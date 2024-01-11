@@ -38,11 +38,11 @@
         padding: 1em 4em;
 
         &--undelined {
-            @include mixins.underline(colors.$accent-dark, colors.$accent-light);
+            @include mixins.underline(colors.$accent-dark, colors.$accent-light, left);
         
             &:is(:hover,
             :focus, :active) {
-                @include mixins.underlineHover(colors.$accent-dark);
+                @include mixins.underlineHover(colors.$accent-dark, 100%);
             }
         }
     }

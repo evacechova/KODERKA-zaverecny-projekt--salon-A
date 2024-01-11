@@ -10,10 +10,23 @@
         font-size: 40px;
         padding: 0 0.5em;
 
+        @include mixins.underline(colors.$accent-dark, colors.$accent-light, center);
+
+        &:is(:hover,
+        :focus, :active) {
+            @include mixins.underlineHover(colors.$accent-dark, 80%);
+        }
+
         @media screen and (min-width: dimensions.$desktop) {
             padding: 0 1.5em;
-        }
+            background-position: center 1.25em;
         
+            &:is(:hover,
+            :focus, :active) {
+                background-size: 60% 1px;
+            }
+        }
+
         &-a {
             font-family: 'Luxurious Script', cursive;
             font-size: 54px;

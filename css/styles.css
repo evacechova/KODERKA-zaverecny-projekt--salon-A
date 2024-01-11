@@ -6,10 +6,26 @@
   text-decoration: none;
   font-size: 40px;
   padding: 0 0.5em;
+  background-image: linear-gradient(90deg, #8D857C, #CAC1B0);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: center 1.5em;
+  padding-block: 0.25em;
+  transition: color 500ms, background-size 500ms;
+}
+.header__link:is(:hover,
+:focus, :active) {
+  color: #8D857C;
+  background-size: 80% 1px;
 }
 @media screen and (min-width: 1024px) {
   .header__link {
     padding: 0 1.5em;
+    background-position: center 1.25em;
+  }
+  .header__link:is(:hover,
+  :focus, :active) {
+    background-size: 60% 1px;
   }
 }
 .header__link-a {
@@ -40,6 +56,9 @@
   background-color: #8D857C;
   overflow: hidden;
   margin-top: -4px;
+}
+.menu:is(:hover, :focus, :active) {
+  background-color: #6D665F;
 }
 @media screen and (min-width: 1024px) {
   .menu {
@@ -93,7 +112,7 @@
 }
 .menu__item:is(:hover,
 :focus, :active) {
-  background-color: #6D665F;
+  background-color: #8D857C;
 }
 @media screen and (min-width: 1024px) {
   .menu__item:is(:hover,
@@ -248,7 +267,7 @@
 .modal__text--undelined:is(:hover,
 :focus, :active) {
   color: #8D857C;
-  background-size: 100% 3px;
+  background-size: 100% 1px;
 }
 
 .form {
@@ -357,7 +376,7 @@
 .contact-box a:is(:hover,
 :focus, :active) {
   color: #8D857C;
-  background-size: 100% 3px;
+  background-size: 100% 1px;
 }
 
 .contact-box__text {
