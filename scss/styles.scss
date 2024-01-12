@@ -37,8 +37,7 @@ body {
 }
 
 h1, h2, h3, p, a, th, td {
-    font-family: 'Noto Sans', sans-serif;
-    color: colors.$font;
+    @include mixins.font;
 }
 
 a {

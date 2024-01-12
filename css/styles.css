@@ -195,16 +195,18 @@
 .button--main::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 1px;
   bottom: 0.6em;
-  left: 1.5em;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 1px;
   background: radial-gradient(#FCFCFB, #6D665F);
-  transition: width 500ms ease;
+  transition: transform 500ms ease;
 }
 .button--main:is(:hover,
 :focus, :active)::after {
-  width: 70%;
+  transform: translateX(-50%) scaleX(0.7);
 }
 
 .button--small {
@@ -234,7 +236,7 @@
 
 .button--send:is(:hover,
 :focus, :active)::after {
-  width: 55%;
+  transform: translateX(-50%) scaleX(0.55);
 }
 
 .modal {
@@ -248,24 +250,34 @@
     max-width: 50vw;
   }
 }
-.modal h2 {
-  text-transform: uppercase;
-  text-align: center;
-}
 .modal__close img {
-  width: 1.4em;
+  width: 1em;
   position: absolute;
-  top: 1.2em;
-  right: 1.2em;
+  top: 0.5em;
+  right: 0.5em;
   box-sizing: content-box;
   border: solid 5px #FCFCFB;
   border-radius: 50%;
   transition: border 700ms ease, background-color 700ms ease;
 }
+@media screen and (min-width: 1024px) {
+  .modal__close img {
+    width: 1.4em;
+    top: 1.2em;
+    right: 1.2em;
+  }
+}
 .modal__close img:is(:hover,
 :focus, :active) {
   border: solid 5px #e4e4e3;
   background-color: #e4e4e3;
+}
+.modal__content {
+  margin: 2em 0;
+}
+.modal__content h2 {
+  text-transform: uppercase;
+  text-align: center;
 }
 .modal__text {
   text-align: justify;
@@ -280,7 +292,7 @@
   background-image: radial-gradient(#8D857C, #e4e4e3);
   background-size: 0% 1px;
   background-repeat: no-repeat;
-  background-position: left 1.5em;
+  background-position: center 1.5em;
   padding-block: 0.25em;
   transition: color 500ms, background-size 500ms;
 }

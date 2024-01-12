@@ -12,27 +12,38 @@
         max-width: calc(100vw*0.5)
     }
 
-    & h2 {
-        text-transform: uppercase;
-        text-align: center;
-    }
-
     &__close img {
-        width: 1.4em;
+        width: 1em;
         position: absolute;
-        top: 1.2em;
-        right: 1.2em;
+        top: 0.5em;
+        right: 0.5em;
         box-sizing: content-box;
         border: solid 5px colors.$background;
         border-radius: 50%;
-        transition: border 700ms ease, background-color 700ms ease;                
+        transition: border 700ms ease, background-color 700ms ease;
+        
+        @include mixins.desktop {
+            width: 1.4em;
+            top: 1.2em;
+            right: 1.2em;    
+        }
 
         &:is(:hover,
             :focus, :active) {
                 border: solid 5px colors.$hover-light;
                 background-color: colors.$hover-light;
-        }        
+        }
     }
+
+    &__content {
+        margin: 2em 0;
+        
+        & h2 {
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+    
 
     &__text {
         text-align: justify;
@@ -43,7 +54,7 @@
         }
 
         &--undelined {
-            @include mixins.underline(colors.$accent-dark, colors.$hover-light, left);
+            @include mixins.underline(colors.$accent-dark, colors.$hover-light, center);
         
             &:is(:hover,
             :focus, :active) {
