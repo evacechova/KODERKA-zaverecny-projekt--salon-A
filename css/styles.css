@@ -368,7 +368,7 @@
 }
 .homepage-gallery__photo:is(:hover,
 :focus, :active) {
-  border-radius: 50%;
+  border-radius: 50px;
 }
 .homepage-gallery__photo img {
   width: 100%;
