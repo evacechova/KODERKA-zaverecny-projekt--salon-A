@@ -10,7 +10,7 @@
         font-size: 40px;
         padding: 0 0.5em;
 
-        @include mixins.underline(colors.$accent-dark, colors.$accent-light, center);
+        @include mixins.underline(colors.$accent-dark, colors.$hover-light, center);
 
         &:is(:hover,
         :focus, :active) {

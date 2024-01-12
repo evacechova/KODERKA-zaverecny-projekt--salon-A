@@ -6,7 +6,7 @@
   text-decoration: none;
   font-size: 40px;
   padding: 0 0.5em;
-  background-image: linear-gradient(90deg, #8D857C, #CAC1B0);
+  background-image: radial-gradient(#8D857C, #e4e4e3);
   background-size: 0% 1px;
   background-repeat: no-repeat;
   background-position: center 1.5em;
@@ -83,7 +83,7 @@
   padding: 0;
   font-size: 1.2em;
   text-decoration: none;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /*check*/
 }
 @media screen and (min-width: 1024px) {
   .menu__list {
@@ -117,6 +117,7 @@
 .menu__item:is(:hover,
 :focus, :active) {
   background-color: #8D857C;
+  transition: background-color 300ms ease;
 }
 @media screen and (min-width: 1024px) {
   .menu__item:is(:hover,
@@ -134,7 +135,7 @@
 @media screen and (min-width: 1024px) {
   .menu__link {
     color: #2E292B;
-    background-image: linear-gradient(90deg, #8D857C, #CAC1B0);
+    background-image: radial-gradient(#8D857C, #e4e4e3);
     background-size: 0% 1px;
     background-repeat: no-repeat;
     background-position: center 1.5em;
@@ -198,7 +199,7 @@
   height: 1px;
   bottom: 0.6em;
   left: 1.5em;
-  background-color: #FCFCFB;
+  background: radial-gradient(#FCFCFB, #6D665F);
   transition: width 500ms ease;
 }
 .button--main:is(:hover,
@@ -276,7 +277,7 @@
   }
 }
 .modal__text--undelined {
-  background-image: linear-gradient(90deg, #8D857C, #CAC1B0);
+  background-image: radial-gradient(#8D857C, #e4e4e3);
   background-size: 0% 1px;
   background-repeat: no-repeat;
   background-position: left 1.5em;
@@ -393,7 +394,7 @@
   justify-content: center;
 }
 .contact-box a {
-  background-image: linear-gradient(90deg, #8D857C, #CAC1B0);
+  background-image: radial-gradient(#8D857C, #e4e4e3);
   background-size: 0% 1px;
   background-repeat: no-repeat;
   background-position: left 1.5em;
@@ -512,7 +513,7 @@
 }
 .price-list tr:is(:hover,
 :focus, :active) {
-  background-color: #E5E5E0;
+  background-color: #e4e4e3;
 }
 .price-list tr.price-list__subtitle:is(:hover,
 :focus, :active) {

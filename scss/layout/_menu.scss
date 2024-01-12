@@ -33,7 +33,7 @@
         padding: 0;
         font-size: 1.2em;
         text-decoration: none;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease; /*check*/
 
         @include mixins.desktop {
             display: flex;
@@ -57,7 +57,7 @@
     }
 
     &__item {
-        padding: 0 3em;
+        padding: 0 3em;        
         
         @media screen and (min-width: dimensions.$desktop) {
             position: relative;
@@ -68,6 +68,7 @@
     &__item:is(:hover,
     :focus, :active) {
         background-color: colors.$accent-dark;
+        transition: background-color 300ms ease;
 
         @include mixins.desktop {
             background-color: transparent;
@@ -83,7 +84,7 @@
 
         @include mixins.desktop {
             color: colors.$font;
-            @include mixins.underline(colors.$accent-dark, colors.$accent-light, center);
+            @include mixins.underline(colors.$accent-dark, colors.$hover-light, center);
 
             &:is(:hover,
             :focus, :active) {

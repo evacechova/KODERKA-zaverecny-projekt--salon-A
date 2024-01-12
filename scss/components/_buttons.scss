@@ -35,7 +35,7 @@
         height: 1px;
         bottom: 0.6em;
         left: 1.5em;
-        background-color: colors.$background;
+        background: radial-gradient(colors.$background, colors.$hover);
         transition: width 500ms ease;
     }
 

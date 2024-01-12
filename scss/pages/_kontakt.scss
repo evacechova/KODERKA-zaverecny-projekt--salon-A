@@ -18,7 +18,7 @@
     }
 
     & a {
-        @include mixins.underline (colors.$accent-dark, colors.$accent-light, left);
+        @include mixins.underline (colors.$accent-dark, colors.$hover-light, left);
     }
 
     & a:is(:hover,

@@ -29,8 +29,8 @@
 
         &:is(:hover,
             :focus, :active) {
-                border: solid 5px colors.$hover-shadow;
-                background-color: colors.$hover-shadow;
+                border: solid 5px colors.$hover-light;
+                background-color: colors.$hover-light;
         }        
     }
 
@@ -43,7 +43,7 @@
         }
 
         &--undelined {
-            @include mixins.underline(colors.$accent-dark, colors.$accent-light, left);
+            @include mixins.underline(colors.$accent-dark, colors.$hover-light, left);
         
             &:is(:hover,
             :focus, :active) {
