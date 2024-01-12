@@ -241,7 +241,7 @@
 
 .modal {
   max-width: 90vw;
-  border: 2px dotted #2E292B;
+  border: solid 2px #CAC1B0;
   background-color: #FCFCFB;
   position: relative;
 }
@@ -306,7 +306,7 @@
   display: grid;
   grid-template-columns: repeat(1, auto);
   grid-template-rows: auto;
-  border: 2px dotted #2E292B;
+  border: solid 1px #CAC1B0;
   margin: 1em 1em;
   padding: 1em;
 }
@@ -322,10 +322,17 @@
   font-family: "Noto Sans", sans-serif;
   color: #2E292B;
   margin: 0.2em;
+  font-weight: bold;
 }
 .form__item {
   font-family: "Noto Sans", sans-serif;
   color: #2E292B;
+  border: solid 1px #CAC1B0;
+  font-size: 1em;
+  transition: background-color 500ms ease;
+}
+.form__item:is(:hover, :focus, :active) {
+  background-color: rgba(202, 193, 176, 0.4);
 }
 
 .index {
@@ -395,7 +402,7 @@
 }
 @media screen and (min-width: 1024px) {
   .contact-box {
-    border: 2px dotted #2E292B;
+    border: solid 2px #CAC1B0;
     margin: auto;
     max-width: 70%;
     padding: 4em;
@@ -497,7 +504,7 @@
 }
 @media screen and (min-width: 1024px) {
   .cenik {
-    border: 2px dotted #2E292B;
+    border: solid 2px #CAC1B0;
     padding: 4em;
   }
 }
@@ -547,7 +554,7 @@
   display: block;
   width: 56%;
   height: 0;
-  border-bottom: 2px dotted #2E292B;
+  border-bottom: solid 2px #CAC1B0;
   background-color: transparent;
   margin: 2em auto 2em auto;
 }

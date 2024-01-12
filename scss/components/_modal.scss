@@ -68,7 +68,7 @@
     display: grid;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: auto;
-    border: dimensions.$border;
+    border: solid 1px colors.$accent-light;
     margin: 1em 1em;
     padding: 1em;
 
@@ -82,9 +82,17 @@
     &__label {
         @include mixins.font;
         margin: 0.2em;
+        font-weight: bold;
     }
 
     &__item {
         @include mixins.font;
+        border: solid 1px colors.$accent-light;
+        font-size: 1em;
+        transition: background-color 500ms ease;
+
+        &:is(:hover, :focus, :active) {
+            background-color: rgba(202, 193, 176, 0.4);
+        }
     }
 }

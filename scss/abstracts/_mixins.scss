@@ -26,3 +26,18 @@
     color: $fontColor;
     background-size: $bcgSize 1px;
 }
+
+@mixin cellBcg($gradient1, $gradient2, $bcgPosition) {
+    background-image: radial-gradient($gradient1, $gradient2);
+            background-size: 0% 100%;
+            background-repeat: no-repeat;
+            background-position: $bcgPosition;
+            padding-block: 0.25em;
+
+            transition: color 1s, background-size 1s;
+}
+
+@mixin cellBcgHover($fontColor, $bcgSize) {
+    color: $fontColor;
+    background-size: $bcgSize 100%;
+}
