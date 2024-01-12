@@ -8,7 +8,7 @@
     flex-direction: column;
     max-width: dimensions.$maxWidth;
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         border: dimensions.$border;
         padding: 4em;       
     }
@@ -27,7 +27,7 @@
         width: 100%;
         align-self: center;
 
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             width: 70%;
         }
     }
@@ -76,7 +76,7 @@
     text-align: justify;
     font-weight: 700;
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         width: 70%;
     }
 }

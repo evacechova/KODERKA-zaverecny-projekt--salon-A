@@ -11,7 +11,7 @@
         background-color: colors.$hover;
     }
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         width: fit-content;
         display: flex;
         flex-direction: row;
@@ -34,7 +34,7 @@
         text-decoration: none;
         transition: transform 0.3s ease;
 
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             display: flex;
         }
     }
@@ -68,7 +68,7 @@
     :focus, :active) {
         background-color: colors.$accent-dark;
 
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             background-color: transparent;
         }
     }
@@ -80,7 +80,7 @@
         display: block;
         width: 100%;
 
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             color: colors.$font;
             @include mixins.underline(colors.$accent-dark, colors.$accent-light, center);
 
@@ -94,7 +94,7 @@
     &__link:is(:hover,
     :focus, :active) {
         
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             color: colors.$accent-dark;
         }
     }
@@ -103,7 +103,7 @@
         max-width: 29px;
         display: none;
         
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             display: block;
             position: absolute;
             right: 10em;

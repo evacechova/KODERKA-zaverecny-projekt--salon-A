@@ -16,7 +16,7 @@
     border: none;
     position: relative;
     
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         font-size: 30px;
     }
 
@@ -57,7 +57,7 @@
     background-color: colors.$accent-dark;
     border: none;
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         margin: 0 auto auto auto;
         font-size: 30px;
     }

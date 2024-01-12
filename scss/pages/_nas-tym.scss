@@ -12,7 +12,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         display: grid;
         grid-template-columns: 1fr minmax(0, 0.5fr) 1fr;
         grid-template-rows: repeat(2, auto);
@@ -31,7 +31,7 @@
         grid-row: 1 / 2;
         justify-self: center;
        
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             max-width: calc(100vw*0.8);
             grid-column: 1 / 2;
             grid-row: 1 / 2;
@@ -50,7 +50,7 @@
         grid-row: 2 / 3;
         justify-self: center;
         
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             grid-column: 2 / -1;
             grid-row: 1 / -1;
             max-width: 100%;

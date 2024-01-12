@@ -1,6 +1,12 @@
 @use 'colors';
 @use 'dimensions';
 
+@mixin desktop {
+    @media screen and (min-width: dimensions.$desktop) {
+        @content;
+    }
+}
+
 @mixin font {
     font-family: 'Noto Sans', sans-serif;
     color: colors.$font;

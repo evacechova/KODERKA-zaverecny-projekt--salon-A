@@ -28,7 +28,7 @@
     padding-bottom: 3em;
     margin: 1em auto;
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         grid-template-columns: repeat(6, auto);
         grid-template-rows: 1fr;
         grid-gap: 0.5em;
@@ -40,14 +40,14 @@
         max-height: 300px;
         overflow: hidden;
 
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             min-height: 400px;
         }
         
         &.photo--desktop {
             display: none;
         
-            @media screen and (min-width: dimensions.$desktop) {
+            @include mixins.desktop {
                 display: block;
             }
         }

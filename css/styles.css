@@ -268,7 +268,12 @@
 }
 .modal__text {
   text-align: justify;
-  padding: 1em 4em;
+  padding: 1em;
+}
+@media screen and (min-width: 1024px) {
+  .modal__text {
+    padding: 1em 4em;
+  }
 }
 .modal__text--undelined {
   background-image: linear-gradient(90deg, #8D857C, #CAC1B0);
@@ -289,8 +294,14 @@
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   border: 2px dotted #2E292B;
-  margin: 1em 4em;
+  margin: 1em 1em;
   padding: 1em;
+}
+@media screen and (min-width: 1024px) {
+  .form {
+    margin: 1em 4em;
+    padding: 1em;
+  }
 }
 .form__label {
   font-family: "Noto Sans", sans-serif;

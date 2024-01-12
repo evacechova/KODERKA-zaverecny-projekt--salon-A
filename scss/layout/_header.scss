@@ -17,7 +17,7 @@
             @include mixins.underlineHover(colors.$accent-dark, 65%);
         }
 
-        @media screen and (min-width: dimensions.$desktop) {
+        @include mixins.desktop {
             padding: 0 1.5em;
             background-position: center 1.25em;
         

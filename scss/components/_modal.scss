@@ -8,7 +8,7 @@
     background-color: colors.$background;
     position: relative;
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @include mixins.desktop {
         max-width: calc(100vw*0.5)
     }
 
@@ -35,7 +35,11 @@
 
     &__text {
         text-align: justify;
-        padding: 1em 4em;
+        padding: 1em;
+        
+        @include mixins.desktop {
+            padding: 1em 4em;   
+        }
 
         &--undelined {
             @include mixins.underline(colors.$accent-dark, colors.$accent-light, left);
@@ -53,8 +57,13 @@
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     border: dimensions.$border;
-    margin: 1em 4em;
+    margin: 1em 1em;
     padding: 1em;
+
+    @include mixins.desktop {
+        margin: 1em 4em;
+        padding: 1em;
+    }
 
     &__label {
         @include mixins.font;
