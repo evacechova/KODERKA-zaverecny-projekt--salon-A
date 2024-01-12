@@ -56,6 +56,7 @@
   background-color: #8D857C;
   overflow: hidden;
   margin-top: -4px;
+  transition: background-color 300ms ease;
 }
 .menu:is(:hover, :focus, :active) {
   background-color: #6D665F;
@@ -177,6 +178,7 @@
   background-color: #8D857C;
   border: none;
   position: relative;
+  transition: border-radius 1s ease;
 }
 @media screen and (min-width: 1024px) {
   .button--main {
@@ -187,7 +189,6 @@
 :focus, :active) {
   background-color: #6D665F;
   border-radius: 50px;
-  transition: border-radius 1s ease;
   cursor: pointer;
 }
 .button--main::after {
@@ -227,8 +228,6 @@
 .button--small:is(:hover,
 :focus, :active) {
   background-color: #6D665F;
-  border-radius: 50px;
-  transition: border-radius 1s ease;
   cursor: pointer;
 }
 
@@ -238,7 +237,7 @@
 }
 
 .modal {
-  width: 70vw;
+  max-width: 90vw;
   border: 2px dotted #2E292B;
   background-color: #FCFCFB;
   position: relative;
@@ -255,16 +254,17 @@
 .modal__close img {
   width: 1.4em;
   position: absolute;
-  top: 1.5em;
-  right: 1.5em;
-  border: solid 0px #e4e4e3;
+  top: 1.2em;
+  right: 1.2em;
+  box-sizing: content-box;
+  border: solid 5px #FCFCFB;
   border-radius: 50%;
+  transition: border 700ms ease, background-color 700ms ease;
 }
 .modal__close img:is(:hover,
 :focus, :active) {
-  border: 5px;
+  border: solid 5px #e4e4e3;
   background-color: #e4e4e3;
-  transition: border 500ms ease, background-color 500ms ease;
 }
 .modal__text {
   text-align: justify;
@@ -291,14 +291,16 @@
 
 .form {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: auto;
   border: 2px dotted #2E292B;
   margin: 1em 1em;
   padding: 1em;
 }
 @media screen and (min-width: 1024px) {
   .form {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
     margin: 1em 4em;
     padding: 1em;
   }
@@ -349,6 +351,7 @@
 .homepage-gallery__photo {
   max-height: 300px;
   overflow: hidden;
+  transition: border-radius 500ms ease;
 }
 @media screen and (min-width: 1024px) {
   .homepage-gallery__photo {
@@ -365,8 +368,7 @@
 }
 .homepage-gallery__photo:is(:hover,
 :focus, :active) {
-  border-radius: 50px;
-  transition: border-radius 0.5s ease;
+  border-radius: 50%;
 }
 .homepage-gallery__photo img {
   width: 100%;

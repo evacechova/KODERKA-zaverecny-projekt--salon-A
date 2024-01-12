@@ -6,6 +6,7 @@
     background-color: colors.$accent-dark;
     overflow: hidden;
     margin-top: -4px;
+    transition: background-color 300ms ease;
 
     &:is(:hover, :focus, :active) {
         background-color: colors.$hover;

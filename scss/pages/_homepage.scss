@@ -39,6 +39,7 @@
     &__photo {
         max-height: 300px;
         overflow: hidden;
+        transition: border-radius 500ms ease;
 
         @include mixins.desktop {
             min-height: 400px;
@@ -54,7 +55,7 @@
 
         &:is(:hover,
         :focus, :active) {
-            @include mixins.hover(0.5s);
+            border-radius: 50%;
         }
 
         & img {

@@ -3,7 +3,7 @@
 @use '../abstracts/mixins' as mixins;
 
 .modal {
-    width: calc(100vw*0.7);
+    max-width: calc(100vw*0.9);
     border: dimensions.$border;
     background-color: colors.$background;
     position: relative;
@@ -20,17 +20,18 @@
     &__close img {
         width: 1.4em;
         position: absolute;
-        top: 1.5em;
-        right: 1.5em;
-        border: solid 0px colors.$hover-shadow;
-        border-radius: 50%;                
+        top: 1.2em;
+        right: 1.2em;
+        box-sizing: content-box;
+        border: solid 5px colors.$background;
+        border-radius: 50%;
+        transition: border 700ms ease, background-color 700ms ease;                
 
         &:is(:hover,
             :focus, :active) {
-                border: 5px;
+                border: solid 5px colors.$hover-shadow;
                 background-color: colors.$hover-shadow;
-                transition: border 500ms ease, background-color 500ms ease;
-            }        
+        }        
     }
 
     &__text {
@@ -54,13 +55,15 @@
 
 .form {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: auto;
     border: dimensions.$border;
     margin: 1em 1em;
     padding: 1em;
 
     @include mixins.desktop {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
         margin: 1em 4em;
         padding: 1em;
     }

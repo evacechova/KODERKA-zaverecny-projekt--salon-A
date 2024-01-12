@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const menuList = document.getElementById('menu__list');
   
     hamburgerIcon.addEventListener('click', function () {
-      menuList.classList.toggle('show');
+    menuList.classList.toggle('show');
     });
   });

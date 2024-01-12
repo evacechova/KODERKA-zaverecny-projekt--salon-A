@@ -12,11 +12,6 @@
     color: colors.$font;
 }
 
-@mixin hover($ease) {
-    border-radius: 50px;
-    transition: border-radius $ease ease;
-}
-
 @mixin underline($gradient1, $gradient2, $bcgPosition) {
     background-image: linear-gradient(90deg, $gradient1, $gradient2);
             background-size: 0% 1px;
