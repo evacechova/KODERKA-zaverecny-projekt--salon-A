@@ -83,16 +83,31 @@
         @include mixins.font;
         margin: 0.2em;
         font-weight: bold;
+
+        &--required::after {
+            content: " *";
+            color: red;
+        }
     }
 
     &__item {
         @include mixins.font;
         border: solid 1px colors.$accent-light;
         font-size: 1em;
-        transition: background-color 500ms ease;
+        transition: background-color 500ms ease, border 500ms ease;
+        color: colors.$font;
+
+        ::placeholder {
+            color: colors.$font;
+        }
 
         &:is(:hover, :focus, :active) {
             background-color: rgba(202, 193, 176, 0.4);
+            border: solid 1px colors.$hover;
+
+        select:hover option:hover {
+                background-color: colors.$accent-dark;
+            }
         }
     }
 }

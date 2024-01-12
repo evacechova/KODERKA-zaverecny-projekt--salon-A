@@ -8,14 +8,14 @@
 
         <form class="form" method="dialog">
             
-            <label for="name" class="form__label">jméno a příjmení</label>
+            <label for="name" class="form__label form__label--required">jméno a příjmení</label>
                 <input class="form__item" type="text" name="name" id="name" placeholder="Anna Vlásková" required>
             
 
-            <label for="phone-number" class="form__label">telefon</label>
-                <input class="form__item" type="tel" inputmode="numeric" name="phone-number" id="phone-number" placeholder="+420 111 222 333" pattern="(?:\+\d{1,3}\s?)?[0-9]{3} [0-9]{3} [0-9]{3}">
+            <label for="phone-number" class="form__label form__label--required">telefon</label>
+                <input class="form__item" type="tel" inputmode="numeric" name="phone-number" id="phone-number" placeholder="+420 111 222 333" pattern="(?:\+\d{1,3}\s?)?[0-9]{3} [0-9]{3} [0-9]{3}" required>
             
-            <label for="service" class="form__label">požadovaná služba</label>
+            <label for="service" class="form__label form__label--required">požadovaná služba</label>
                 <select class="form__item" name="service" id="service" required>
                     <option value="">vyberte požadovanou službu</option>
                     <option value="hair">vlasové služby</option>
