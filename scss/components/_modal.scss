@@ -76,7 +76,6 @@
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(2, auto);
         margin: 1em 4em;
-        padding: 1em;
     }
 
     &__label {
@@ -96,6 +95,7 @@
         font-size: 1em;
         transition: background-color 500ms ease, border 500ms ease;
         color: colors.$font;
+        position: relative;
 
         ::placeholder {
             color: colors.$font;
@@ -104,10 +104,7 @@
         &:is(:hover, :focus, :active) {
             background-color: rgba(202, 193, 176, 0.4);
             border: solid 1px colors.$hover;
-
-        select:hover option:hover {
-                background-color: colors.$accent-dark;
-            }
+            outline: 0;
         }
     }
 }

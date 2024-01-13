@@ -315,7 +315,6 @@
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(2, auto);
     margin: 1em 4em;
-    padding: 1em;
   }
 }
 .form__label {
@@ -335,6 +334,7 @@
   font-size: 1em;
   transition: background-color 500ms ease, border 500ms ease;
   color: #2E292B;
+  position: relative;
 }
 .form__item ::-moz-placeholder {
   color: #2E292B;
@@ -345,9 +345,7 @@
 .form__item:is(:hover, :focus, :active) {
   background-color: rgba(202, 193, 176, 0.4);
   border: solid 1px #6D665F;
-}
-.form__item:is(:hover, :focus, :active) select:hover option:hover {
-  background-color: #8D857C;
+  outline: 0;
 }
 
 .index {
