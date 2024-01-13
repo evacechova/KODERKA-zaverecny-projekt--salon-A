@@ -19,7 +19,7 @@
             background-position: $bcgPosition 1.5em;
             padding-block: 0.25em;
 
-            transition: color 500ms, background-size 500ms;
+            transition: color 300ms, background-size 300ms;
 }
 
 @mixin underlineHover($fontColor, $bcgSize) {

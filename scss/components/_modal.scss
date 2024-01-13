@@ -93,7 +93,7 @@
         @include mixins.font;
         border: solid 1px colors.$accent-light;
         font-size: 1em;
-        transition: background-color 500ms ease, border 500ms ease;
+        transition: background-color 300ms ease, border 300ms ease;
         color: colors.$font;
         position: relative;
 
