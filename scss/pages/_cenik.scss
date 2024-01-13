@@ -3,14 +3,14 @@
 @use '../abstracts/mixins' as mixins;
 
 .cenik {
-    margin: 1em auto 15% auto;
+    margin: 1rem auto 15% auto;
     display: flex;
     flex-direction: column;
     max-width: dimensions.$maxWidth;
 
     @include mixins.desktop {
         border: dimensions.$border;
-        padding: 4em;       
+        padding: 4rem;       
     }
 }
 

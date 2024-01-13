@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .header {
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 .header__link {
   text-decoration: none;
@@ -40,8 +40,8 @@
 
 .footer {
   width: 100%;
-  padding: 1em 1em;
-  font-size: 0.7em;
+  padding: 1rem 1rem;
+  font-size: 0.7rem;
   text-align: center;
   background-color: #CAC1B0;
   position: absolute;
@@ -167,12 +167,12 @@
 }
 
 .button--main {
-  padding: 0.5rem 1.2rem;
+  padding: 0.5em 1.2em;
   text-transform: lowercase;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   font-size: 25px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   display: block;
   margin: 1rem auto;
   color: #FCFCFB;
@@ -195,7 +195,7 @@
 .button--main::after {
   content: "";
   position: absolute;
-  bottom: 0.6rem;
+  bottom: 0.6em;
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
@@ -210,14 +210,14 @@
 }
 
 .button--small {
-  padding: 0.5rem 1.2rem;
+  padding: 0.5em 1.2em;
   text-transform: lowercase;
   font-family: "Noto Sans", sans-serif;
   font-weight: 300;
   font-size: 25px;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.1em;
   display: block;
-  margin: 1rem auto;
+  margin: 1em auto;
   color: #FCFCFB;
   background-color: #8D857C;
   border: none;
@@ -349,7 +349,7 @@
 }
 
 .index {
-  margin: 1em auto 15% auto;
+  margin: 1rem auto 15% auto;
   display: flex;
   flex-direction: column;
   max-width: 80%;
@@ -432,14 +432,14 @@
 }
 
 .contact-box {
-  margin: 1em auto 15% auto;
+  margin: 1rem auto 15% auto;
 }
 @media screen and (min-width: 1024px) {
   .contact-box {
     border: solid 2px #CAC1B0;
     margin: auto;
     max-width: 70%;
-    padding: 4em;
+    padding: 4rem;
   }
 }
 .contact-box h1, .contact-box h2 {
@@ -531,7 +531,7 @@
 }
 
 .cenik {
-  margin: 1em auto 15% auto;
+  margin: 1rem auto 15% auto;
   display: flex;
   flex-direction: column;
   max-width: 80%;
@@ -539,7 +539,7 @@
 @media screen and (min-width: 1024px) {
   .cenik {
     border: solid 2px #CAC1B0;
-    padding: 4em;
+    padding: 4rem;
   }
 }
 
@@ -605,7 +605,7 @@
 }
 
 .nas-tym {
-  margin: 1em auto 15% auto;
+  margin: 1rem auto 15% auto;
 }
 
 .profile-card {
