@@ -6,8 +6,7 @@
         <h2>Kontaktní formulář</h2>
         <p class="modal__text"><strong class="modal__text--undelined">Vyplňte prosím níže uvedený formulář</strong> a naše recepční se vám obratem ozve pro domluvu termínu, nebo nám rovnou sami <strong><a class="modal__text--undelined" href="tel:+420777666555">zavolejte na číslo +420 777 666 555</a></strong>.</p>
 
-        <form class="form" method="dialog">
-            
+        <form class="form" method="dialog">            
             <label for="name" class="form__label form__label--required">jméno a příjmení</label>
                 <input class="form__item" type="text" name="name" id="name" placeholder="Anna Vlásková" pattern="[\p{L}\s]+" required>
             
@@ -24,9 +23,9 @@
             
             <label for="date" class="form__label">preferovaný termín návštěvy</label>
                 <input class="form__item" type="date" name="date" id="date" placeholder="dd. mm. rrrrr">
-        </form>
 
-        <!-- talčítko pro odeslání formuláře -->
-        {% include 'partials/button--send.njk' %}
+            <!-- talčítko pro odeslání formuláře -->
+            {% include 'partials/button--send.njk' %}
+        </form>
     </div>
 </dialog>

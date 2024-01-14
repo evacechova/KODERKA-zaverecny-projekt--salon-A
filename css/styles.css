@@ -250,6 +250,10 @@
     max-width: 50vw;
   }
 }
+.modal::backdrop {
+  background: #2E292B;
+  opacity: 0.4;
+}
 .modal__close img {
   width: 1rem;
   position: absolute;
@@ -273,12 +277,12 @@
   background-color: #e4e4e3;
 }
 .modal__content {
-  margin: 1.5rem 0;
+  margin: 0;
 }
 .modal__content h2 {
   text-transform: uppercase;
   text-align: center;
-  margin: 0.5em auto 0.25em auto;
+  margin: 1em auto 0.25em auto;
 }
 .modal__text {
   text-align: justify;
