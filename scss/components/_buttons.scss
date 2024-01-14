@@ -72,7 +72,12 @@
     }
 }
 
-.button--send:is(:hover,
-:focus,:active)::after {
-    transform: translateX(-50%) scaleX(0.55);
+
+.button--send {
+    grid-column: 1 / -1;
+
+    &:is(:hover,
+    :focus,:active)::after {
+        transform: translateX(-50%) scaleX(0.55);
+    }
 }
