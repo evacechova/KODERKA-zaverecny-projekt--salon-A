@@ -70,16 +70,21 @@
             display: block;
             position: absolute;
             width: 100%;
-            height: 20%;
+            height: 30%;
             bottom: 0;
             transform: translateY(0) scaleY(0);
             transform-origin: bottom;
             background-color: rgba(228, 228, 227, 0.65);
+            font-size: small;
+            text-wrap: wrap;
             color: transparent;
             line-height: 3rem;
             text-align: center;
             transition: transform 300ms ease;
 
+            @include mixins.desktop {
+            font-size: medium;
+            }
         }
 
         &:is(:hover,
