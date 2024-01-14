@@ -4,7 +4,7 @@
 
 .modal {
     max-width: calc(100vw*0.9);
-    border: dimensions.$border;
+    border: solid 0 colors.$background;
     background-color: colors.$background;
     position: relative;
 
@@ -13,10 +13,10 @@
     }
 
     &__close img {
-        width: 1em;
+        width: 1rem;
         position: absolute;
-        top: 0.5em;
-        right: 0.5em;
+        top: 0.5rem;
+        right: 0.5rem;
         box-sizing: content-box;
         border: solid 5px colors.$background;
         border-radius: 50%;
@@ -36,18 +36,19 @@
     }
 
     &__content {
-        margin: 2em 0;
+        margin: 1.5rem 0;
         
         & h2 {
             text-transform: uppercase;
             text-align: center;
+            margin: 0.5em auto 0.25em auto;
         }
     }
     
 
     &__text {
         text-align: justify;
-        padding: 1em;
+        padding: 0.5em 1em;
         
         @include mixins.desktop {
             padding: 1em 4em;   
@@ -68,13 +69,14 @@
     display: grid;
     grid-template-columns: repeat(1, auto);
     grid-template-rows: auto;
-    border: solid 1px colors.$accent-light;
-    margin: 1em 1em;
+    margin: 0;
     padding: 1em;
+    background-color: colors.$background;
 
     @include mixins.desktop {
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(2, auto);
+        grid-gap: 0.5em 1em;
         margin: 1em 4em;
     }
 
@@ -82,6 +84,7 @@
         @include mixins.font;
         margin: 0.2em;
         font-weight: bold;
+        font-size: smaller;
 
         &--required::after {
             content: " *";
@@ -91,19 +94,17 @@
 
     &__item {
         @include mixins.font;
-        border: solid 1px colors.$accent-light;
+        border: solid 1px colors.$hover-light;
+        border-radius: 10px;
         font-size: 1em;
-        transition: background-color 300ms ease, border 300ms ease;
+        background-color: colors.$background;
+        transition: background-color 300ms ease;
         color: colors.$font;
         position: relative;
-
-        ::placeholder {
-            color: colors.$font;
-        }
+        margin-bottom: 0.5em;
 
         &:is(:hover, :focus, :active) {
-            background-color: rgba(202, 193, 176, 0.4);
-            border: solid 1px colors.$hover;
+            background-color: colors.$hover-light;
             outline: 0;
         }
     }
