@@ -1,12 +1,11 @@
-@use '../abstracts/colors' as colors;
-@use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixins;
 
 .contact-box {
-    margin: dimensions.$pageMargin;
+    margin: var.$pageMargin;
     
     @include mixins.desktop {
-        border: dimensions.$border;
+        border: var.$border;
         margin: auto;
         max-width: 70%;
         padding: 4rem;       
@@ -18,12 +17,12 @@
     }
 
     & a {
-        @include mixins.underline (colors.$accent-dark, colors.$hover-light, left);
+        @include mixins.underline (var.$accent-dark, var.$hover-light, left);
     }
 
     & a:is(:hover,
     :focus, :active) {
-        @include mixins.underlineHover(colors.$accent-dark, 100%);
+        @include mixins.underlineHover(var.$accent-dark, 100%);
     }
 }
 

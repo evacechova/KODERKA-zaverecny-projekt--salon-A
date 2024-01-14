@@ -1,15 +1,14 @@
-@use '../abstracts/colors' as colors;
-@use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixins;
 
 .menu {
-    background-color: colors.$accent-dark;
+    background-color: var.$accent-dark;
     overflow: hidden;
     margin-top: -4px;
     transition: background-color 300ms ease;
 
     &:is(:hover, :focus, :active) {
-        background-color: colors.$hover;
+        background-color: var.$hover;
     }
 
     @include mixins.desktop {
@@ -48,10 +47,10 @@
 
     &__hamburger {
         cursor: pointer;
-        color: colors.$background;
+        color: var.$background;
         padding: 0.5em 1em;
 
-        @media screen and (min-width: dimensions.$desktop) {
+        @media screen and (min-width: var.$desktop) {
             display: none;
         }
     }
@@ -59,7 +58,7 @@
     &__item {
         padding: 0 3em;        
         
-        @media screen and (min-width: dimensions.$desktop) {
+        @media screen and (min-width: var.$desktop) {
             position: relative;
             padding: 2px 3em;           
         }
@@ -67,7 +66,7 @@
 
     &__item:is(:hover,
     :focus, :active) {
-        background-color: colors.$accent-dark;
+        background-color: var.$accent-dark;
         transition: background-color 300ms ease;
 
         @include mixins.desktop {
@@ -78,17 +77,17 @@
     &__link {
         text-transform: lowercase;
         text-wrap: nowrap;
-        color: colors.$background;
+        color: var.$background;
         display: block;
         width: 100%;
 
         @include mixins.desktop {
-            color: colors.$font;
-            @include mixins.underline(colors.$accent-dark, colors.$hover-light, center);
+            color: var.$font;
+            @include mixins.underline(var.$accent-dark, var.$hover-light, center);
 
             &:is(:hover,
             :focus, :active) {
-                @include mixins.underlineHover(colors.$accent-dark, 75%);
+                @include mixins.underlineHover(var.$accent-dark, 75%);
             }
         }
     }
@@ -97,7 +96,7 @@
     :focus, :active) {
         
         @include mixins.desktop {
-            color: colors.$accent-dark;
+            color: var.$accent-dark;
         }
     }
 

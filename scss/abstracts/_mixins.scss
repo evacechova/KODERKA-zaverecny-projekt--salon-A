@@ -1,15 +1,14 @@
-@use 'colors';
-@use 'dimensions';
+@use 'variables';
 
 @mixin desktop {
-    @media screen and (min-width: dimensions.$desktop) {
+    @media screen and (min-width: variables.$desktop) {
         @content;
     }
 }
 
 @mixin font {
     font-family: 'Noto Sans', sans-serif;
-    color: colors.$font;
+    color: variables.$font;
 }
 
 @mixin underline($gradient1, $gradient2, $bcgPosition) {

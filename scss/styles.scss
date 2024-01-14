@@ -1,5 +1,4 @@
-@use 'abstracts/colors' as colors;
-@use 'abstracts/dimensions' as dimensions;
+@use 'abstracts/variables' as var;
 @use 'abstracts/mixins' as mixins;
 @use 'layout';
 @use 'components';
@@ -21,7 +20,7 @@ html {
 *, ::after, ::before { box-sizing: inherit; }
 
 body {
-    background-color: colors.$background;
+    background-color: var.$background;
     margin: 0;
 }
 
@@ -29,7 +28,7 @@ body {
     margin: 2em auto auto auto;
     padding-bottom: 5%;
 
-    @media screen and (min-width: dimensions.$desktop) {
+    @media screen and (min-width: var.$desktop) {
         max-width: 1240px;
         margin: 4em auto auto auto;
         padding-bottom: 10%;

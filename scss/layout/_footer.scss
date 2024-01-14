@@ -1,5 +1,4 @@
-@use '../abstracts/colors' as colors;
-@use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixins;
 
 .footer {
@@ -7,7 +6,7 @@
     padding: 1rem 1rem;
     font-size: 0.7rem;
     text-align: center;
-    background-color: colors.$accent-light;
+    background-color: var.$accent-light;
     position: absolute;
     bottom: 0;
     margin-top: 5%;

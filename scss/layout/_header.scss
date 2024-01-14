@@ -1,5 +1,4 @@
-@use '../abstracts/colors' as colors;
-@use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixins;
 
 .header {
@@ -10,11 +9,11 @@
         font-size: 40px;
         padding: 0 0.5em;
 
-        @include mixins.underline(colors.$accent-dark, colors.$hover-light, center);
+        @include mixins.underline(var.$accent-dark, var.$hover-light, center);
 
         &:is(:hover,
         :focus, :active) {
-            @include mixins.underlineHover(colors.$accent-dark, 65%);
+            @include mixins.underlineHover(var.$accent-dark, 65%);
         }
 
         @include mixins.desktop {
@@ -36,7 +35,7 @@
     &__photo {
         height: auto;
         width: 100%;
-        border: 1px solid colors.$accent-light;
+        border: 1px solid var.$accent-light;
     }
 }
 

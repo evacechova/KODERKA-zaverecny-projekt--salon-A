@@ -1,9 +1,8 @@
-@use '../abstracts/colors' as colors;
-@use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixins;
 
 .nas-tym {
-    margin: dimensions.$pageMargin;
+    margin: var.$pageMargin;
 }
 
 .profile-card {
@@ -45,7 +44,7 @@
 
     &__photo {
         max-width: calc(100vw*0.75);
-        border: 1px solid colors.$accent-light;
+        border: 1px solid var.$accent-light;
         grid-column: 1 / -1;
         grid-row: 2 / 3;
         justify-self: center;

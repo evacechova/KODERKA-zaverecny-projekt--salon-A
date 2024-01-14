@@ -1,13 +1,12 @@
-@use '../abstracts/colors' as colors;
-@use '../abstracts/dimensions' as dimensions;
+@use '../abstracts/variables' as var;
 @use '../abstracts/mixins' as mixins;
 
 
 .index {
-    margin: dimensions.$pageMargin;
+    margin: var.$pageMargin;
     display: flex;
     flex-direction: column;
-    max-width: dimensions.$maxWidth;
+    max-width: var.$maxWidth;
 }
 
 .plain-text {
@@ -90,7 +89,7 @@
         &:is(:hover,
         :focus, :active)::after {
             transform: translateY(0) scaleY(1);
-            color: colors.$font;
+            color: var.$font;
         }   
     }
 }
