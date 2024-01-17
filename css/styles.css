@@ -628,7 +628,7 @@
   .profile-card {
     grid-template-columns: repeat(2, auto);
     grid-template-rows: repeat(3, auto);
-    grid-row-gap: 1em;
+    grid-row-gap: 2em;
     grid-column-gap: 1em;
     padding-bottom: 3em;
   }
@@ -648,8 +648,7 @@
   .profile-card__text {
     grid-column: 1/2;
     grid-row: 1/2;
-    padding-right: 1em;
-    padding-top: 0;
+    padding: 0 1em 0 0;
   }
   .profile-card__text.Misa {
     grid-column: 2/-1;
@@ -666,10 +665,6 @@
   grid-row: 2/3;
   justify-self: center;
   transition: border-radius 300ms ease;
-}
-.profile-card__photo:is(:hover,
-:focus, :active) {
-  border-radius: 50px;
 }
 @media screen and (min-width: 1024px) {
   .profile-card__photo {
@@ -713,11 +708,12 @@
   -o-object-fit: cover;
      object-fit: cover;
   cursor: zoom-in;
-  transition: border-radius 300ms ease;
+  filter: grayscale(100%);
+  transition: filter 300ms ease;
 }
 .profile-card__gallery .gallery-photo:is(:hover,
 :focus, :active) {
-  border-radius: 50px;
+  filter: none;
 }
 
 .top-panel {

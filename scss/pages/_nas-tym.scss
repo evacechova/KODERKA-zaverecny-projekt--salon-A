@@ -14,7 +14,7 @@
     @include mixins.desktop {
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(3, auto);
-        grid-row-gap: 1em;
+        grid-row-gap: 2em;
         grid-column-gap: 1em;
         padding-bottom: 3em;
 
@@ -34,8 +34,7 @@
         @include mixins.desktop {
             grid-column: 1 / 2;
             grid-row: 1 / 2;
-            padding-right: 1em;
-            padding-top: 0;
+            padding: 0 1em 0 0;
 
             &.Misa {
                 grid-column: 2 / -1;
@@ -53,11 +52,6 @@
         grid-row: 2 / 3;
         justify-self: center;
         transition: border-radius 300ms ease;
-
-        &:is(:hover,
-        :focus, :active) {
-            border-radius: 50px;
-        }
         
         @include mixins.desktop {
             grid-column: 2 / -1;
@@ -100,12 +94,13 @@
             vertical-align: bottom;
             object-fit: cover;
             cursor: zoom-in;
-            transition: border-radius 300ms ease;
+            filter: grayscale(100%);
+            transition: filter 300ms ease;
 
             &:is(:hover,
-            :focus, :active) {
-                border-radius: 50px;
-            }
+                :focus, :active) {
+                    filter: none;
+                }
         }
     }
 }
