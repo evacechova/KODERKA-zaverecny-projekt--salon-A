@@ -50,6 +50,9 @@
 .footer__text {
   margin: 0;
 }
+.footer__link {
+  text-decoration: underline;
+}
 
 .menu {
   background-color: #8D857C;
