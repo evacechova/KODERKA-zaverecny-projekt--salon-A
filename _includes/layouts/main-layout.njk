@@ -40,10 +40,15 @@
         <!--obsah šablony, která používá tuto-->
             {{ content | safe }}
 
-        <!--hamburger menu-->
+        <!--JS-->
         <script>
             {% include "scripts/.hamburger-menu.js" %}
+        </script>
+        <script>
             {% include "scripts/.modal.js" %}
+        </script>
+        <script>
+            {% include "scripts/.fslightbox.js" %}
         </script>
 
         </body>

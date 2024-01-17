@@ -14,6 +14,7 @@
     background-color: var.$accent-dark;
     border: none;
     position: relative;
+    border-radius: 4px;
     transition: border-radius 600ms ease;
     
     @include mixins.desktop {
@@ -47,21 +48,14 @@
 }
 
 .button--small {
-    padding: 0.5em 1.2em;
-    text-transform: lowercase;
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    letter-spacing: 0.1em;
-    display: block;
-    margin: 1em auto;
-    color: var.$background;
-    background-color: var.$accent-dark;
-    border: none;
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
 
     @include mixins.desktop {
         margin: 0 auto auto auto;
         font-size: 30px;
+        grid-column: 1 / -1;
+        grid-row: 3 / 4;
     }
     
     &:is(:hover,
