@@ -85,7 +85,6 @@
   padding: 0;
   font-size: 1.2em;
   text-decoration: none;
-  transition: transform 0.3s ease; /*check*/
 }
 @media screen and (min-width: 1024px) {
   .menu__list {
