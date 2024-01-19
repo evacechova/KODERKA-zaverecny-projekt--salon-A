@@ -718,6 +718,11 @@
   filter: none;
 }
 
+* {
+  min-width: 0;
+  margin: 0;
+}
+
 .top-panel {
   position: relative;
 }
