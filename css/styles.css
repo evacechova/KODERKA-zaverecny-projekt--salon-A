@@ -445,7 +445,7 @@
 @media screen and (min-width: 1024px) {
   .contact-box {
     border: solid 2px #e4e4e3;
-    margin: auto;
+    margin: auto auto 15% auto;
     max-width: 70%;
     padding: 4rem;
   }

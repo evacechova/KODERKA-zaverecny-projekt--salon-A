@@ -6,7 +6,7 @@
     
     @include mixins.desktop {
         border: var.$border;
-        margin: auto;
+        margin: auto auto 15% auto;
         max-width: 70%;
         padding: 4rem;       
     }
