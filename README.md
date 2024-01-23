@@ -7,3 +7,4 @@ Kurz jsem tímto projektem úspěšně ukončila k 19. prosinci 2023. Projekt js
 - web má prozatím verzi pro mobil a pro počítač
 - kód může obsahovat poznámky pro budoucí úpravy a dodělávky!
     - do budoucna plánuji například přidat další obrázky a upravit dle toho tlačítka (dvě velikosti)
+    - je potřeba revidovat nastavení marginů a paddingu v dolní části stránky pro sjednocení layoutu na všech stránkách webu a ve všech verzích webu
