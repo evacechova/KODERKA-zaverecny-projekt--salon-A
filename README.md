@@ -8,3 +8,13 @@ Kurz jsem tímto projektem úspěšně ukončila k 19. prosinci 2023. Projekt js
 - kód může obsahovat poznámky pro budoucí úpravy a dodělávky!
     - do budoucna plánuji například přidat další obrázky a upravit dle toho tlačítka (dvě velikosti)
     - je potřeba revidovat nastavení marginů a paddingu v dolní části stránky pro sjednocení layoutu na všech stránkách webu a ve všech verzích webu
+
+------EN version------
+
+Final project created for the Become a coder intensive coding course by Czechitas (autumn 2023). The website is coded in Eleventy and using both BEM and Sass. I successfully finished the course and got my certification by handing in this project on December 19 th 2023. I have been further improving and refining its code and visuals ever since.
+
+- the webiste is composed of front-end only with minimum of JS, e.g. in the hamburger menu (JS was not part of the course, I have been learning it on my own)
+- so far, the website is optimised for use on mobile phones and computer screens
+- the code may contain notes on planned adjustments and improvements!
+    - one of these improvements is adding more photos and adjusting the button size to have two visually different buttons
+    - I am also planning to review the code for the margins and paddings at the bottom of the page to ensure the layout is consistent across all pages and all versions of the website
