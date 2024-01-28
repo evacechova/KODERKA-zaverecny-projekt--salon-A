@@ -1,10 +1,12 @@
 const modal = document.querySelector('#modal');
-const openModal = document.querySelector('.button--main');
+const openModalArray = document.querySelectorAll('.button--main');
 const closeModal = document.querySelector('.modal__close');
 
-openModal.addEventListener('click', () => {
-    modal.showModal();
-})
+for (const modalButton of openModalArray) {
+    modalButton.addEventListener('click', () => {
+        modal.showModal();
+    })
+}
 
 closeModal.addEventListener('click', () => {
     modal.close();
