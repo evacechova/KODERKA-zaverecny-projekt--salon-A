@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as mixins;
 
 .cenik {
-    margin: 1rem auto 15% auto;
+    margin-inline: auto;
     display: flex;
     flex-direction: column;
     max-width: var.$maxWidth;

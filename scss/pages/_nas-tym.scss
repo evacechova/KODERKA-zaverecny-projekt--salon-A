@@ -2,11 +2,11 @@
 @use '../abstracts/mixins' as mixins;
 
 .nas-tym {
-    margin: var.$pageMargin;
+    margin-inline: auto;
 }
 
 .profile-card {
-    padding: 1em 10vw;
+    padding: 0 10vw;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax (0, 1fr));
     grid-template-rows: repeat(4, auto);

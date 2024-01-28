@@ -2,11 +2,10 @@
 @use '../abstracts/mixins' as mixins;
 
 .contact-box {
-    margin: var.$pageMargin;
+    margin-inline: auto;
     
     @include mixins.desktop {
         border: var.$border;
-        margin: auto auto 15% auto;
         max-width: 70%;
         padding: 4rem;       
     }
@@ -18,79 +17,80 @@
 
     & a {
         @include mixins.underline (var.$accent-dark, var.$hover-light, left);
+        padding: 0;
     }
 
     & a:is(:hover,
     :focus, :active) {
         @include mixins.underlineHover(var.$accent-dark, 100%);
     }
-}
 
-.contact-box__text {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, auto);
-
-    @include mixins.desktop {
-        grid-template-columns: repeat(2, auto);
-        grid-template-rows: 1fr;
-        max-width: 80%;
-        margin: 0 auto; 
-        padding-bottom: 3em;       
-    }
-
-    .opening-hours {
-        grid-column: 1 / -1;
-        grid-row: 1 / 2;
+    &__text {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
 
         @include mixins.desktop {
-            grid-column: 1 / 2;
-            grid-row: 1 / -1;
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: 1fr;
+            max-width: 80%;
+            margin: 0 auto; 
+            padding-bottom: 3em;       
+        }
+
+        .opening-hours {
+            grid-column: 1 / -1;
+            grid-row: 1 / 2;
+
+            @include mixins.desktop {
+                grid-column: 1 / 2;
+                grid-row: 1 / -1;
+            }
+        
+            & table {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .address {
+            grid-column: 1 / -1;
+            grid-row: 2 / 3;
+            margin-bottom: 5%;
+
+            @include mixins.desktop {
+                grid-column: 2 / -1;
+                grid-row: 1 / -1;
+                margin-bottom: 0;
+            }
+        }
+
+        & h3 {
+            margin-bottom: 0.5em;
+            text-align: center;
+            text-transform: lowercase;
         }
     
-        & table {
-            display: flex;
-            justify-content: center;
+        & td:nth-child(2) {
+            padding-left: 2em;
         }
-    }
 
-    .address {
-        grid-column: 1 / -1;
-        grid-row: 2 / 3;
-        margin-bottom: 5%;
-
-        @include mixins.desktop {
-            grid-column: 2 / -1;
-            grid-row: 1 / -1;
-            margin-bottom: 0;
+        & p {
+            text-align: center;
         }
-    }
-
-    & h3 {
-        margin-bottom: 0.5em;
-        text-align: center;
-        text-transform: lowercase;
-    }
-  
-    & td:nth-child(2) {
-        padding-left: 2em;
-    }
-
-    & p {
-        text-align: center;
     }
 }
 
 .google-map {
     padding-bottom: 50%;
     position: relative;
-    margin: 1em auto 4em auto;
-
+    
     @include mixins.desktop {
     margin: 0;
     }
     
     & iframe {
+        display: block;
         height: 100%;
         width: 100%;
         left: 0;

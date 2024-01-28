@@ -45,7 +45,6 @@
   background-color: #CAC1B0;
   position: absolute;
   bottom: 0;
-  margin-top: 5%;
 }
 .footer__text {
   margin: 0;
@@ -350,7 +349,7 @@
 }
 
 .index {
-  margin: 1rem auto 15% auto;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   max-width: 80%;
@@ -370,8 +369,6 @@
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(2, auto);
   grid-gap: 0.5em;
-  padding-bottom: 3em;
-  margin: 1em auto;
 }
 @media screen and (min-width: 1024px) {
   .homepage-gallery {
@@ -440,12 +437,11 @@
 }
 
 .contact-box {
-  margin: 1rem auto 15% auto;
+  margin-inline: auto;
 }
 @media screen and (min-width: 1024px) {
   .contact-box {
     border: solid 2px #e4e4e3;
-    margin: auto auto 15% auto;
     max-width: 70%;
     padding: 4rem;
   }
@@ -461,13 +457,13 @@
   background-position: left 1.5em;
   padding-block: 0.25em;
   transition: color 300ms, background-size 300ms;
+  padding: 0;
 }
 .contact-box a:is(:hover,
 :focus, :active) {
   color: #8D857C;
   background-size: 100% 1px;
 }
-
 .contact-box__text {
   display: grid;
   grid-template-columns: 1fr;
@@ -523,7 +519,6 @@
 .google-map {
   padding-bottom: 50%;
   position: relative;
-  margin: 1em auto 4em auto;
 }
 @media screen and (min-width: 1024px) {
   .google-map {
@@ -531,6 +526,7 @@
   }
 }
 .google-map iframe {
+  display: block;
   height: 100%;
   width: 100%;
   left: 0;
@@ -539,7 +535,7 @@
 }
 
 .cenik {
-  margin: 1rem auto 15% auto;
+  margin-inline: auto;
   display: flex;
   flex-direction: column;
   max-width: 80%;
@@ -617,11 +613,11 @@
 }
 
 .nas-tym {
-  margin: 1rem auto 15% auto;
+  margin-inline: auto;
 }
 
 .profile-card {
-  padding: 1em 10vw;
+  padding: 0 10vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax 0, 1fr);
   grid-template-rows: repeat(4, auto);
@@ -746,14 +742,13 @@ body {
 }
 
 .main {
-  margin: 2em auto auto auto;
-  padding-bottom: 5%;
+  padding-top: 1rem;
+  padding-bottom: 6rem;
+  margin-inline: auto;
 }
 @media screen and (min-width: 1024px) {
   .main {
     max-width: 1240px;
-    margin: 4em auto auto auto;
-    padding-bottom: 10%;
   }
 }
 
@@ -772,6 +767,5 @@ p {
 
 h1 {
   text-transform: uppercase;
-  margin-bottom: 0.5em;
-  margin-top: 0;
+  padding-bottom: 1rem;
 }/*# sourceMappingURL=styles.css.map */

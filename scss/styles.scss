@@ -30,13 +30,12 @@ body {
 }
 
 .main {
-    margin: 2em auto auto auto;
-    padding-bottom: 5%;
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+    margin-inline: auto;
 
-    @media screen and (min-width: var.$desktop) {
+    @include mixins.desktop {
         max-width: 1240px;
-        margin: 4em auto auto auto;
-        padding-bottom: 10%;
     }
 }
 
@@ -54,8 +53,7 @@ p {
 
 h1 {
     text-transform: uppercase;
-    margin-bottom: 0.5em;
-    margin-top: 0;
+    padding-bottom: 1rem;
 }
 
 
