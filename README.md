@@ -7,7 +7,7 @@ Kurz jsem tímto projektem úspěšně ukončila k 19. prosinci 2023. Projekt js
 - web má prozatím verzi pro mobil a pro počítač
 - kód může obsahovat poznámky pro budoucí úpravy a dodělávky!
     - do budoucna plánuji například přidat další obrázky a upravit dle toho tlačítka (dvě velikosti)
-    - je potřeba revidovat nastavení marginů a paddingu v některých částech stránky pro sjednocení layoutu na všech stránkách webu a ve všech verzích webu
+    - je potřeba revidovat některé designové volby z původního návrhu pro větší vizuální sjednocení layoutu na všech stránkách webu a ve všech verzích webu
 
 ------EN version------
 
@@ -17,4 +17,4 @@ Final project created for the Become a coder intensive coding course by Czechita
 - so far, the website is optimised for use on mobile phones and computer screens
 - the code may contain notes on planned adjustments and improvements!
     - one of these improvements is adding more photos and adjusting the button size to have two visually different buttons
-    - I am also planning to review the code for the margins and paddings in some sections of the page to ensure the layout is consistent across all pages and all versions of the website
+    - I am also planning to review some of the original design choices to give the layout more of a consistent apppearance across all pages and all versions of the website
